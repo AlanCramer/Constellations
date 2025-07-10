@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+#viewer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.star-label {
+  color: white;
+  font-size: 0.8em;
+  text-shadow: 0 0 4px black;
+  pointer-events: none;
+}
+.constellation-label {
+  color: cyan;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-shadow: 0 0 4px black;
+  pointer-events: none;
+}
