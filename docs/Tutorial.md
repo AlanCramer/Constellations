@@ -244,3 +244,33 @@
 
 - Can you add a second Box near the first one and make it a different color?
 - Can you add a white ball where the camera is?
+- Can you add a ball and a torus?  
+- Can you make the ball go through the torus?
+
+11. ### Time to scour some data
+
+    I found star and constellation data here:  
+    https://codeberg.org/astronexus/hyg/src/branch/main/data/hyg/CURRENT  
+    https://github.com/MarcvdSluys/ConstellationLines   
+
+    The two key files are in the starVis/data directory:
+    - hyg_v42.csv  
+    - ConstellationLines.csv
+
+    The hyg file is like 34MB and contains data for more than 100K stars.
+    I made smaller files from this file that just contained the info I was after:  
+
+    - Name : Proper name, not all stars have one
+    - HR   : Harvard Reference - the id to match with ConstellationLines.csv
+    - RA   : Right ascension (akin to longitude)
+    - DEC  : Declenation (akin it latitude)
+    - MAG  : Magnitude - to determine the size to render
+
+    You can find the python script I used (chatgpt wrote it) to parse and cull the data in starVis/data.
+
+    The processed files (stars*.csv and ConstellationLines.csv) were copied to starVis/public to get served by vite.
+
+    Parsing utilizes Papa Parse:  
+    https://www.papaparse.com/  
+
+

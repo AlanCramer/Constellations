@@ -1,6 +1,6 @@
 # Star-Map Viewer (Three.js + Vite)
 
-An interactive, browser-based **planetarium** that renders the 1 000–2 000 brightest stars, IAU constellation lines, and ecliptic on a virtual celestial sphere.  
+An interactive, browser-based **planetarium** that renders a few thousand brightest stars, IAU and constellation lines on a virtual celestial sphere.  
 Built with **Three.js** for WebGL rendering, **three-stdlib** for helpers, and **Vite** for zero-config bundling / hot-reload.
 
 <div align="center">
@@ -22,15 +22,32 @@ Built with **Three.js** for WebGL rendering, **three-stdlib** for helpers, and *
 
 ---
 
-## 1. Data sources & licensing
+## 1. Data sources, Libraries and licensing
 
-All astronomy catalogue files are derived from the open datasets distributed with **[Stellarium](https://stellarium.org/)**:
 
-- `stars*.csv` – positions, magnitudes, proper names.
-- `ConstellationLines.csv` – IAU line segments for 88 constellations.
+#### <u>Data</u>
 
-See `data/LICENSE.md` for Stellarium’s original GNU GPL notice and attribution.  
-This viewer does **not** embed any Stellarium code—only the public CSV exports.
+All astronomy catalog of stars are derived from the open datasets distributed from David Nash's   
+https://codeberg.org/astronexus/hyg/src/branch/main/data/hyg/CURRENT  
+
+The ConstellationLines.csv came from Marc van der Sluys' repo  
+https://github.com/MarcvdSluys/ConstellationLines
+
+
+- `stars*.csv` – positions, magnitudes, proper names were derived from the hyg_v42.csv file
+- `ConstellationLines.csv` – IAU line segments for 88 constellations was from
+https://github.com/MarcvdSluys/ConstellationLines/blob/master/ConstellationLines.csv
+
+
+#### <u>Libraries</u>
+
+This project is all about THREEJS  
+https://threejs.org/  
+
+Other Libs -  
+
+I like Papa Parse for CSV processing:
+http://papaparse.com/
 
 ---
 
