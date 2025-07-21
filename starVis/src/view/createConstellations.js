@@ -8,13 +8,6 @@ export function createConstellations(edges, starMap, opts = {}) {
   const group = new THREE.Group();
   const labelObjects = [];
 
-  // Safety check: assign .pos if it doesn’t already exist
-  for (const star of starMap.values()) {
-    if (!star.pos) {
-      star.pos = raDecToVec3(star.ra, star.dec, radius).multiplyScalar(-1);
-    }
-  }
-
   const centerMap = new Map(); // track label centers
   const constellationMap = new Map(); // NEW: group lines by constellation
 
