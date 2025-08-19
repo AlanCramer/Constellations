@@ -18,14 +18,19 @@ const mouse = new THREE.Vector2();
 
 //Load stars
 const starMap = await loadStarMap();
+
 const {
   group: starField,
-  labels: starLabels,
+  hrLabels,
+  nameLabels,
   dispose: disposeStarField,
 } = createStarField(starMap, {
   radius: 100,
   labelMag: 3,
 });
+
+window.hrLabels = hrLabels;
+window.nameLabels = nameLabels;
 
 scene.add(starField);
 
@@ -34,7 +39,6 @@ const edges = await loadConstellationEdges();
 const {
   group: constellations,
   dispose: disposeConstellations,
-  labels: constellationLabels,
 } = createConstellations(edges, starMap);
 
 scene.add(constellations);
@@ -42,8 +46,8 @@ scene.add(constellations);
 // buildUI creates the checkboxes for controlling visibility
 // in general, it makes dom elements
 buildUI({
-  starLabels,
-  constellationLabels,
+  hrLabels,
+  nameLabels,
   constellationsGroup: constellations,
 });
 

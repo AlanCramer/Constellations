@@ -12,7 +12,7 @@ import { OrbitControls, CSS2DRenderer } from "three-stdlib";
 export function initThreeScene(container, opts = {}) {
   if (!container) throw new Error("initThreeScene: container is required");
 
-  const frustumSize = opts.frustumSize ?? 50;
+  const frustumSize = opts.frustumSize ?? 60;
   const aspect = container.clientWidth / container.clientHeight;
 
   // --- Scene & camera -------------------------------------------------------
@@ -25,8 +25,8 @@ export function initThreeScene(container, opts = {}) {
     0.1,
     1000
   );
-  camera.position.set(0, 0, 0);
-  camera.lookAt(0, 0, 1);
+  camera.position.set(-3, 1, 0); //(x, y, z)
+  camera.lookAt(1, 1, 1);
 
   // --- WebGL renderer -------------------------------------------------------
   const renderer = new THREE.WebGLRenderer({ antialias: true });
