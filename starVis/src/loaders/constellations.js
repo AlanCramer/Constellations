@@ -1,12 +1,7 @@
 import Papa from "papaparse";
 
-/**
- * Load IAU “symbol” line sequences from CSV and return a flat array of edges.
- * Each edge is { name: "ORI", star1: 190, star2: 225 }.
- *
- * @param {string} url
- * @returns {Promise<Array<{name:string,star1:number,star2:number}>>}
- */
+// create a Map of constellation abreviation (see data file)
+// to a list of stars (HR ids)
 export async function loadConstellationEdges(
   url = "../../public/ConstellationLines.csv"
 ) {
@@ -19,7 +14,7 @@ export async function loadConstellationEdges(
     transformHeader: (h) => h.trim(),
   });
 
-  const edges = [];
+  const constellationMap = new Map();
 
   for (const row of data) {
     const abr = row.abr?.trim();
@@ -31,13 +26,8 @@ export async function loadConstellationEdges(
       if (val && !isNaN(+val)) ids.push(+val);
     }
 
-    for (let i = 0; i < ids.length - 1; i++) {
-      edges.push({ name: abr, star1: ids[i], star2: ids[i + 1] });
-    }
+    constellationMap.set(abr, ids);
   }
 
-  if (edges.length === 0) {
-    console.warn("loadConstellationEdges: parsed zero edges — wrong CSV?");
-  }
-  return edges;
+  return constellationMap;
 }

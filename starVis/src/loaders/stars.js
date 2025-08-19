@@ -1,6 +1,7 @@
 import Papa from "papaparse";
 import { raDecToVec3 } from "../utils/utils";
 
+// create a Map of the Harvard Resource Id (HR) to star data (name, ra, dec, etc)
 export async function loadStarMap(url = "../../public/stars1000.csv") {
   const res = await fetch(url);
   const text = await res.text();
