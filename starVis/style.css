@@ -10,16 +10,27 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-.star-label {
-  color: white;
-  font-size: 0.8em;
-  text-shadow: 0 0 4px black;
-  pointer-events: none;
+/* Add this CSS to your stylesheet */
+.hr-star-label {
+  font-family: Arial, sans-serif;
+  font-size: 15px; /* Adjust as necessary */
+  color: #ffffff; /* White text for better visibility */
+  text-align: center;
+  user-select: none;
 }
+
+.star-name {
+  font-family: Arial, sans-serif;
+  font-size: 20px; /* Adjust as necessary */
+  color: #ffffff; 
+  text-align: center;
+  user-select: none;
+}
+
 .constellation-label {
   color: cyan;
   font-size: 0.9em;
   font-weight: bold;
-  text-shadow: 0 0 4px black;
+  text-shadow: 0 0 4px rgb(0, 0, 0);
   pointer-events: none;
 }

@@ -126,3 +126,5 @@ open http://localhost:5173 (default) in your browser
 ## 4. TO DO
 
 See starVis/TODO.md
+
+//more sources: https://theskylive.com/sky/constellations/leo-bright-stars

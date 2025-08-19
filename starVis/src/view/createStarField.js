@@ -2,6 +2,7 @@
 import * as THREE from "three";
 import { CSS2DObject } from "three-stdlib";
 import { raDecToVec3 } from "../utils/utils.js";
+import { useHRNames, useStarNames } from "../dom/uiControls.js";
 
 /**
  * Build a THREE.Points mesh *plus* optional name-labels.
@@ -19,43 +20,45 @@ export function createStarField(starMap, opts = {}) {
   const group = new THREE.Group();
   const positions = [];
   const colors = [];
-  const labels = [];
 
+  const hrLabels = [];
+  const nameLabels = [];
+
+  // Loop through each star in the starMap
   for (const star of starMap.values()) {
     if (isNaN(star.ra) || isNaN(star.dec) || isNaN(star.mag)) continue;
 
-    // cache vec3 on star so other layers can reuse it
-    const pos =
-      star.pos ??
-      (star.pos = raDecToVec3(star.ra, star.dec, radius).multiplyScalar(-1));
-
+    // Cache position for the star
+    const pos = star.pos ?? (star.pos = raDecToVec3(star.ra, star.dec, radius).multiplyScalar(-1));
     positions.push(pos.x, pos.y, pos.z);
-    colors.push(1, 1, 1); // white; swap in per-star colour later
+    colors.push(1, 1, 1); // Default color is white
 
-    // Decide whether to label
-    if (star.name && !star.name.startsWith("HR") && star.mag <= labelMag) {
+    // Create HR name label if HR is available and the toggle is on
+    if (/*useHRNames &&*/ star.hr) {
       const div = document.createElement("div");
-      div.className = "star-label";
-      div.textContent = star.name;
-
+      div.className = "hr-star-label";
+      div.textContent = `HR ${star.hr}`;
       const label = new CSS2DObject(div);
-      label.position.copy(
-        pos
-          .clone()
-          .normalize()
-          .multiplyScalar(radius + 4)
-      ); // sit just above sphere
-
+      label.position.copy(pos.clone().normalize().multiplyScalar(radius + 4));
       group.add(label);
-      labels.push(label);
+      hrLabels.push(label);
+    }
+
+    // Create Star name label if the name is available and the toggle is on
+    if (/*useStarNames &&*/ star.name) {
+      const div = document.createElement("div");
+      div.className = "star-name";
+      div.textContent = star.name;
+      const label = new CSS2DObject(div);
+      label.position.copy(pos.clone().normalize().multiplyScalar(radius + 6));
+      group.add(label);
+      nameLabels.push(label);
     }
   }
 
+  // Create the points for the star field
   const geometry = new THREE.BufferGeometry();
-  geometry.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(positions, 3)
-  );
+  geometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
   geometry.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));
 
   const material = new THREE.PointsMaterial({
@@ -67,10 +70,12 @@ export function createStarField(starMap, opts = {}) {
   const points = new THREE.Points(geometry, material);
   group.add(points);
 
+  // Function to dispose of geometry and material
   function dispose() {
     geometry.dispose();
     material.dispose();
   }
 
-  return { group, labels, dispose };
+  // Return the result with proper closure
+  return { group, hrLabels, nameLabels, dispose };
 }

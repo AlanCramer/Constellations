@@ -1,7 +1,7 @@
 import Papa from "papaparse";
 import { raDecToVec3 } from "../utils/utils";
 
-export async function loadStarMap(url = "../../public/stars2000.csv") {
+export async function loadStarMap(url = "../../public/stars1000.csv") {
   const res = await fetch(url);
   const text = await res.text();
 

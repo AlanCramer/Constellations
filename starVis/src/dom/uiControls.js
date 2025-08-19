@@ -3,13 +3,17 @@
  * Build the control panel and wire visibility toggles.
  *
  * @param {Object} targets
- * @param {CSS2DObject[]} targets.starLabels
- * @param {CSS2DObject[]} targets.constellationLabels
+ * @param {CSS2DObject[]} targets.hrLabels
+ * @param {CSS2DObject[]} targets.nameLabels
  * @param {THREE.Object3D} targets.constellationsGroup
  */
+
+export let useHRNames = true;
+export let useStarNames = true;
+
 export function buildUI({
-  starLabels,
-  constellationLabels,
+  hrLabels,
+  nameLabels,
   constellationsGroup,
 }) {
   // ---- Create DOM ---------------------------------------------------------
@@ -22,10 +26,11 @@ export function buildUI({
     `;
 
   panel.innerHTML = `
-      <label><input type="checkbox" id="chk-starlabels"          checked> Star labels</label><br>
-      <label><input type="checkbox" id="chk-constellationlabels" checked> Constellation labels</label><br>
-      <label><input type="checkbox" id="chk-constellations"      checked> Constellation lines</label>
-    `;
+  <label><input type="checkbox" id="chk-hrlabels" checked> HR Star Labels</label><br>
+  <label><input type="checkbox" id="chk-starNames" checked> Star Names</label><br>
+  <label><input type="checkbox" id="chk-constellations" checked> Constellation lines</label>
+`;
+
 
   document.body.appendChild(panel);
 
@@ -39,17 +44,17 @@ export function buildUI({
   }
 
   // ---- Event listeners ----------------------------------------------------
-  panel.querySelector("#chk-starlabels").addEventListener("change", (e) => {
-    setVisible(starLabels, e.target.checked);
-  });
+ panel.querySelector("#chk-hrlabels").addEventListener("change", (e) => {
+  setVisible(hrLabels, e.target.checked);
+});
 
-  panel
-    .querySelector("#chk-constellationlabels")
-    .addEventListener("change", (e) => {
-      setVisible(constellationLabels, e.target.checked);
-    });
+panel.querySelector("#chk-starNames").addEventListener("change", (e) => {
+  setVisible(nameLabels, e.target.checked);
+});
 
-  panel.querySelector("#chk-constellations").addEventListener("change", (e) => {
-    setVisible(constellationsGroup, e.target.checked);
-  });
+panel.querySelector("#chk-constellations").addEventListener("change", (e) => {
+  setVisible(constellationsGroup, e.target.checked);
+});
+
+
 }
