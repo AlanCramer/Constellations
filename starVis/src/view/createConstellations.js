@@ -2,7 +2,6 @@ import * as THREE from "three";
 import { CONSTELLATION_NAMES } from "../../constellation-names.js";
 import { CSS2DObject } from "three-stdlib";
 import { raDecToVec3 } from "../utils/utils.js";
-import { useHRNames, useStarNames } from "../dom/uiControls.js"; // ✅ import toggles
 
 export function createConstellations(edges, starMap, opts = {}) {
   const radius = opts.radius ?? 100;
@@ -16,19 +15,6 @@ export function createConstellations(edges, starMap, opts = {}) {
   for (const star of starMap.values()) {
     if (!star.pos) {
       star.pos = raDecToVec3(star.ra, star.dec, radius).multiplyScalar(-1);
-    }
-
-
-    ///////Chloe Check: is this used anywhere? 
-    // === STAR NAME LABELS ===
-    if (useStarNames && star.name) {
-      const nameDiv = document.createElement("div");
-      nameDiv.className = "star-label-name";
-      nameDiv.textContent = star.name;
-      const nameLabel = new CSS2DObject(nameDiv);
-      nameLabel.position.copy(star.pos.clone().normalize().multiplyScalar(radius + 4));
-      group.add(nameLabel);
-      labelObjects.push(nameLabel);
     }
   }
 

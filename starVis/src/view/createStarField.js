@@ -2,7 +2,6 @@
 import * as THREE from "three";
 import { CSS2DObject } from "three-stdlib";
 import { raDecToVec3 } from "../utils/utils.js";
-import { useHRNames, useStarNames } from "../dom/uiControls.js";
 
 /**
  * Build a THREE.Points mesh *plus* optional name-labels.
@@ -34,7 +33,7 @@ export function createStarField(starMap, opts = {}) {
     colors.push(1, 1, 1); // Default color is white
 
     // Create HR name label if HR is available and the toggle is on
-    if (/*useHRNames &&*/ star.hr) {
+    if (star.hr) {
       const div = document.createElement("div");
       div.className = "hr-star-label";
       div.textContent = `HR ${star.hr}`;
@@ -42,10 +41,10 @@ export function createStarField(starMap, opts = {}) {
       label.position.copy(pos.clone().normalize().multiplyScalar(radius + 4));
       group.add(label);
       hrLabels.push(label);
-    }
+    } 
 
     // Create Star name label if the name is available and the toggle is on
-    if (/*useStarNames &&*/ star.name) {
+    if (star.name) {
       const div = document.createElement("div");
       div.className = "star-name";
       div.textContent = star.name;
