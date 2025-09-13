@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { CONSTELLATION_NAMES } from "../../constellation-names.js";
 import { CSS2DObject } from "three-stdlib";
-import { raDecToVec3 } from "../utils/utils.js";
+import { raDecToVec3 } from "../utils/utils.js"; //Converts star coordinates
 
 export function createConstellations(edges, starMap, opts = {}) {
   const radius = opts.radius ?? 100;
@@ -19,16 +19,19 @@ export function createConstellations(edges, starMap, opts = {}) {
   }
 
   // === DRAW CONSTELLATION LINES ===
+  //each edge is a connection between two stars, this gets the first and second star, 
+  //and then creates a line between them
+  // it skips if the stars doesn't exist
   for (const edge of edges) {
     const s1 = starMap.get(edge.star1);
     const s2 = starMap.get(edge.star2);
-    if (!s1 || !s2) continue;
+    if (!s1 || !s2) continue; 
 
     const geometry = new THREE.BufferGeometry().setFromPoints([s1.pos, s2.pos]);
-    const material = new THREE.LineBasicMaterial({ color: 0x88ccff });
-    const line = new THREE.LineSegments(geometry, material);
+    const material = new THREE.LineBasicMaterial({ color: 0x88ccff }); //this is the color of the constellation names...? (the color is light blue)
+    const line = new THREE.LineSegments(geometry, material); //creates the constellation lines. 
 
-    line.userData.constellation = edge.name;
+    line.userData.constellation = edge.name; //stores constellation name on line. 
 
     // Group lines by constellation name and their edges
     if (!constellationMap.has(edge.name)) {
@@ -46,19 +49,19 @@ export function createConstellations(edges, starMap, opts = {}) {
   }
 
   // === CONSTELLATION NAME LABELS ===
-  for (const [name, mids] of centerMap) {
-    const center = new THREE.Vector3();
-    mids.forEach((v) => center.add(v));
-    center.divideScalar(mids.length);
+  for (const [name, mids] of centerMap) { //for each constellation, 
+    const center = new THREE.Vector3(); //calculate the center point
+    mids.forEach((v) => center.add(v)); //so add all midpoints
+    center.divideScalar(mids.length); //average them...?
 
-    const div = document.createElement("div");
-    div.className = "constellation-label";
-    div.textContent = CONSTELLATION_NAMES[name] || name;
+    const div = document.createElement("div"); //div: creates HTML element
+    div.className = "constellation-label"; //CSS class for styling
+    div.textContent = CONSTELLATION_NAMES[name] || name; // ORI -> Orion
 
-    const label = new CSS2DObject(div);
+    const label = new CSS2DObject(div); //makes a 3d label
     label.position.copy(center.normalize().multiplyScalar(radius * 1.02));
     group.add(label);
-    labelObjects.push(label);
+    labelObjects.push(label); //stores the label in the labelObjects array, for toggle
   }
 
   // === Hover highlighting ===
