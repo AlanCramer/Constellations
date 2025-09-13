@@ -6,6 +6,7 @@
  * @param {CSS2DObject[]} targets.hrLabels
  * @param {CSS2DObject[]} targets.nameLabels
  * @param {THREE.Object3D} targets.constellationsGroup
+ * @param {CSS2DObject[]} targets.constellationNames
  */
 
 export let useHRNames = false;
@@ -15,6 +16,7 @@ export function buildUI({
   hrLabels,
   nameLabels,
   constellationsGroup,
+  constellationNames,
   controls,
 }) {
   // ---- Create DOM ---------------------------------------------------------
@@ -29,8 +31,9 @@ export function buildUI({
   panel.innerHTML = `
   <label><input type="checkbox" id="chk-hrlabels" > HR Star Labels</label><br>
   <label><input type="checkbox" id="chk-starNames" > Star Names</label><br>
-  <label><input type="checkbox" id="chk-constellations" checked> Constellation lines</label><br>
-  <label><input type="checkbox" id="chk-autoRotate" > Auto-rotate sphere</label>
+  <label><input type="checkbox" id="chk-constellations" checked> Constellation Lines</label><br>
+  <label><input type="checkbox" id="chk-constellation-names" checked> Constellation Names</label><br>
+  <label><input type="checkbox" id="chk-autoRotate" > Auto-rotate Sphere</label>
 `;
 
 
@@ -62,6 +65,10 @@ panel.querySelector("#chk-starNames").addEventListener("change", (e) => {
 
 panel.querySelector("#chk-constellations").addEventListener("change", (e) => {
   setVisible(constellationsGroup, e.target.checked);
+});
+
+panel.querySelector("#chk-constellation-names").addEventListener("change", (e) => {
+  setVisible(constellationNames, e.target.checked);
 });
 
 panel.querySelector("#chk-autoRotate").addEventListener("change", (e) => {

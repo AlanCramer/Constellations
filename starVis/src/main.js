@@ -34,10 +34,11 @@ window.nameLabels = nameLabels;
 
 scene.add(starField);
 
-//Load constellations
+//Load constellations from constellations.js 
 const edges = await loadConstellationEdges();
 const {
   group: constellations,
+  labels: constellationNames,
   dispose: disposeConstellations,
 } = createConstellations(edges, starMap);
 
@@ -49,6 +50,7 @@ buildUI({
   hrLabels,
   nameLabels,
   constellationsGroup: constellations,
+  constellationNames,
   controls,
 });
 
