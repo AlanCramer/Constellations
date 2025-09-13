@@ -49,6 +49,7 @@ buildUI({
   hrLabels,
   nameLabels,
   constellationsGroup: constellations,
+  controls,
 });
 
 // Track mouse position

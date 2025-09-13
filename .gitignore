@@ -5,3 +5,4 @@ dist/
 .env
 .prettierignore
 venv/
+chloe_start_notes.txt

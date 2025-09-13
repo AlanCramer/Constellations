@@ -39,6 +39,7 @@ export function createStarField(starMap, opts = {}) {
       div.textContent = `HR ${star.hr}`;
       const label = new CSS2DObject(div);
       label.position.copy(pos.clone().normalize().multiplyScalar(radius + 4));
+      label.visible = false; // Start with labels hidden
       group.add(label);
       hrLabels.push(label);
     } 
@@ -50,6 +51,7 @@ export function createStarField(starMap, opts = {}) {
       div.textContent = star.name;
       const label = new CSS2DObject(div);
       label.position.copy(pos.clone().normalize().multiplyScalar(radius + 6));
+      label.visible = false; // Start with labels hidden
       group.add(label);
       nameLabels.push(label);
     }

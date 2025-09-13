@@ -12,7 +12,7 @@ import { OrbitControls, CSS2DRenderer } from "three-stdlib";
 export function initThreeScene(container, opts = {}) {
   if (!container) throw new Error("initThreeScene: container is required");
 
-  const frustumSize = opts.frustumSize ?? 60;
+  const frustumSize = opts.frustumSize ?? 300;
   const aspect = container.clientWidth / container.clientHeight;
 
   // --- Scene & camera -------------------------------------------------------
@@ -46,7 +46,16 @@ export function initThreeScene(container, opts = {}) {
   controls.enablePan = false;
   controls.enableDamping = true;
   controls.rotateSpeed = 0.4;
-  controls.target.set(0, 0, -1);
+  controls.target.set(0, 0, 0); // Center the target at origin
+  controls.minDistance = 10;
+  controls.maxDistance = 200;
+  controls.enableZoom = true;
+  // Remove polar angle restrictions for full sphere rotation
+  controls.minPolarAngle = 0;
+  controls.maxPolarAngle = Math.PI;
+  // Auto-rotation settings
+  controls.autoRotate = false;
+  controls.autoRotateSpeed = 0.5; // Slow, smooth rotation
   controls.update();
 
   // --- Resize handler -------------------------------------------------------

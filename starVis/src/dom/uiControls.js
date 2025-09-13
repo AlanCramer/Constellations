@@ -15,6 +15,7 @@ export function buildUI({
   hrLabels,
   nameLabels,
   constellationsGroup,
+  controls,
 }) {
   // ---- Create DOM ---------------------------------------------------------
   const panel = document.createElement("div");
@@ -28,7 +29,8 @@ export function buildUI({
   panel.innerHTML = `
   <label><input type="checkbox" id="chk-hrlabels" > HR Star Labels</label><br>
   <label><input type="checkbox" id="chk-starNames" > Star Names</label><br>
-  <label><input type="checkbox" id="chk-constellations" checked> Constellation lines</label>
+  <label><input type="checkbox" id="chk-constellations" checked> Constellation lines</label><br>
+  <label><input type="checkbox" id="chk-autoRotate" > Auto-rotate sphere</label>
 `;
 
 
@@ -43,6 +45,12 @@ export function buildUI({
     }
   }
 
+  // ---- Set initial visibility based on checkbox state --------------------
+  // Set initial visibility to match unchecked state of checkboxes
+  setVisible(hrLabels, false);
+  setVisible(nameLabels, false);
+  // Constellations checkbox is checked by default, so keep it visible
+
   // ---- Event listeners ----------------------------------------------------
  panel.querySelector("#chk-hrlabels").addEventListener("change", (e) => {
   setVisible(hrLabels, e.target.checked);
@@ -54,6 +62,10 @@ panel.querySelector("#chk-starNames").addEventListener("change", (e) => {
 
 panel.querySelector("#chk-constellations").addEventListener("change", (e) => {
   setVisible(constellationsGroup, e.target.checked);
+});
+
+panel.querySelector("#chk-autoRotate").addEventListener("change", (e) => {
+  controls.autoRotate = e.target.checked;
 });
 
 
