@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphere View Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        
+        #controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+        }
+        
+        #controls label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        
+        #controls input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        #info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <h3>Sphere View Test</h3>
+        <label>
+            <input type="checkbox" id="insideView"> Inside View (Planetarium)
+        </label>
+        <label>
+            <input type="checkbox" id="showGrid"> Show Grid
+        </label>
+    </div>
+    
+    <div id="info">
+        <div>Camera Position: <span id="camPos">-</span></div>
+        <div>Camera Target: <span id="camTarget">-</span></div>
+        <div>Distance: <span id="distance">-</span></div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        // Scene setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x000011);
+        document.body.appendChild(renderer.domElement);
+
+        // Create a solid sphere
+        const sphereGeometry = new THREE.SphereGeometry(50, 32, 32);
+        const sphereMaterial = new THREE.MeshBasicMaterial({
+            color: 0x222244,
+            wireframe: false,
+            transparent: false,
+            opacity: 1.0,
+            side: THREE.FrontSide
+        });
+        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        scene.add(sphere);
+        
+        // Create a wireframe overlay
+        const wireframeGeometry = new THREE.SphereGeometry(51, 17, 16); //CHLOE ADJUST THIS FOR STARS ON OUTSIDE OF SPHERE. 
+        const wireframeMaterial = new THREE.MeshBasicMaterial({ 
+            color: 0x8888ff, 
+            wireframe: true,
+            transparent: true,
+            opacity: 0.6,
+            side: THREE.FrontSide
+        });
+        const wireframe = new THREE.Mesh(wireframeGeometry, wireframeMaterial);
+        scene.add(wireframe);
+
+        // Create some test points ON the sphere surface
+        const pointsGeometry = new THREE.BufferGeometry();
+        const pointsMaterial = new THREE.PointsMaterial({ 
+            color: 0xffffff, 
+            size: 4,
+            sizeAttenuation: false,
+            depthTest: true,
+            depthWrite: true
+        });
+        
+        const points = [];
+        for (let i = 0; i < 100; i++) {
+            const phi = Math.acos(-1 + (2 * i) / 100);
+            const theta = Math.sqrt(100 * Math.PI) * phi;
+            
+            // Position points exactly on sphere surface (radius 50) so they're part of the surface
+            const x = 51 * Math.cos(theta) * Math.sin(phi);
+            const y = 51 * Math.sin(theta) * Math.sin(phi);
+            const z = 51 * Math.cos(phi);
+            
+            points.push(x, y, z);
+        }
+        
+        pointsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
+        const starField = new THREE.Points(pointsGeometry, pointsMaterial);
+        scene.add(starField);
+        
+        // Create some test lines ON the sphere surface
+        const linesGeometry = new THREE.BufferGeometry();
+        const linesMaterial = new THREE.LineBasicMaterial({ 
+            color: 0x00ff00, 
+            linewidth: 2,
+            depthTest: true,
+            depthWrite: true
+        });
+        
+        const linePoints = [];
+        // Create a few constellation-like lines on the sphere
+        for (let i = 0; i < 20; i++) {
+            const phi1 = Math.acos(-1 + (2 * i) / 20);
+            const theta1 = Math.sqrt(20 * Math.PI) * phi1;
+            const phi2 = Math.acos(-1 + (2 * (i + 1)) / 20);
+            const theta2 = Math.sqrt(20 * Math.PI) * phi2;
+            
+            // Position lines exactly on sphere surface (radius 50) so they're part of the surface
+            const x1 = 50 * Math.cos(theta1) * Math.sin(phi1);
+            const y1 = 50 * Math.sin(theta1) * Math.sin(phi1);
+            const z1 = 50 * Math.cos(phi1);
+            
+            const x2 = 50 * Math.cos(theta2) * Math.sin(phi2);
+            const y2 = 50 * Math.sin(theta2) * Math.sin(phi2);
+            const z2 = 50 * Math.cos(phi2);
+            
+            linePoints.push(x1, y1, z1, x2, y2, z2);
+        }
+        
+        linesGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePoints, 3));
+        const constellationLines = new THREE.LineSegments(linesGeometry, linesMaterial);
+        scene.add(constellationLines);
+
+        // Add a grid
+        const gridHelper = new THREE.GridHelper(200, 60, 0xff0000, 0x00ff00);
+        scene.add(gridHelper);
+
+        // Camera and controls setup
+        camera.position.set(0, 0, 100);
+        camera.lookAt(0, 0, 0);
+        
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.rotateSpeed = 0.5;
+        controls.zoomSpeed = 1.0;
+        controls.panSpeed = 0.8;
+
+
+        // Initial state: outside view
+        controls.target.set(0, 0, 0);
+        controls.minDistance = 60;
+        controls.maxDistance = 300;
+        controls.enablePan = false;
+
+        // UI controls
+        const insideViewCheckbox = document.getElementById('insideView');
+        const showGridCheckbox = document.getElementById('showGrid');
+        const camPosSpan = document.getElementById('camPos');
+        const camTargetSpan = document.getElementById('camTarget');
+        const distanceSpan = document.getElementById('distance');
+
+        // View switching function
+        function switchView(isInsideView) {
+            if (isInsideView) {
+                // Inside view: camera inside the sphere
+                camera.position.set(0, 0, 0);
+                controls.target.set(0, 0, 0); ///YES ALL AT 0, 0, 0 is the CENTER
+                controls.minDistance = 1;
+                controls.maxDistance = 50;
+                controls.enableZoom = false;
+                controls.enablePan = true;
+                controls.rotateSpeed = 1.0;
+                
+                // Make both sphere and wireframe double-sided so we can see from inside
+                sphere.material.side = THREE.DoubleSide;
+                wireframe.material.side = THREE.DoubleSide;
+            } else {
+                // Outside view: camera outside the sphere
+                camera.position.set(0, 0, 100);
+                controls.target.set(0, 0, 0);
+                controls.minDistance = 60;
+                controls.maxDistance = 300;
+                controls.enableZoom = true;
+                controls.enablePan = false;
+                controls.rotateSpeed = 0.5;
+                
+                // Make both sphere and wireframe single-sided for solid ball effect
+                sphere.material.side = THREE.FrontSide;
+                wireframe.material.side = THREE.FrontSide;
+            }
+            controls.update();
+        }
+
+            // Initial state: inside view
+            insideViewCheckbox.checked = true; // checkbox matches the view
+            switchView(true);
+        
+
+        // Event listeners
+        insideViewCheckbox.addEventListener('change', (e) => {
+            switchView(e.target.checked);
+        });
+
+        showGridCheckbox.addEventListener('change', (e) => {
+            gridHelper.visible = e.target.checked;
+        });
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            
+            // Update info display
+            const pos = camera.position;
+            const target = controls.target;
+            const distance = pos.distanceTo(target);
+            
+            camPosSpan.textContent = `(${pos.x.toFixed(1)}, ${pos.y.toFixed(1)}, ${pos.z.toFixed(1)})`;
+            camTargetSpan.textContent = `(${target.x.toFixed(1)}, ${target.y.toFixed(1)}, ${target.z.toFixed(1)})`;
+            distanceSpan.textContent = distance.toFixed(1);
+            
+            renderer.render(scene, camera);
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Start animation
+        animate();
+    </script>
+</body>
+</html>

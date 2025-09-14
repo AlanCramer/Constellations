@@ -31,7 +31,8 @@ export function createConstellations(edges, starMap, opts = {}) {
     const material = new THREE.LineBasicMaterial({ color: 0x88ccff }); //this is the color of the constellation names...? (the color is light blue)
     const line = new THREE.LineSegments(geometry, material); //creates the constellation lines. 
 
-    line.userData.constellation = edge.name; //stores constellation name on line. 
+    line.userData.constellation = edge.name; //stores constellation name on line.
+    line.userData.edge = edge; // Store edge data for view switching 
 
     // Group lines by constellation name and their edges
     if (!constellationMap.has(edge.name)) {
@@ -80,6 +81,24 @@ export function createConstellations(edges, starMap, opts = {}) {
     }
   };
 
+  // Function to switch between inside and outside view
+  function switchConstellationView(isInsideView) {
+    for (const child of group.children) {
+      if (child.isLineSegments) {
+        const edge = child.userData.edge;
+        if (edge) {
+          const s1 = starMap.get(edge.star1);
+          const s2 = starMap.get(edge.star2);
+          if (s1 && s2) {
+            const pos1 = isInsideView ? s1.posInside : s1.posOutside;
+            const pos2 = isInsideView ? s2.posInside : s2.posOutside;
+            child.geometry.setFromPoints([pos1, pos2]);
+          }
+        }
+      }
+    }
+  }
+
   function dispose() {
     for (const child of group.children) {
       if (child.isLineSegments) {
@@ -89,5 +108,5 @@ export function createConstellations(edges, starMap, opts = {}) {
     }
   }
 
-  return { group, dispose, labels: labelObjects };
+  return { group, dispose, labels: labelObjects, switchConstellationView };
 }

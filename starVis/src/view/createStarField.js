@@ -71,6 +71,23 @@ export function createStarField(starMap, opts = {}) {
   const points = new THREE.Points(geometry, material);
   group.add(points);
 
+  // Function to switch between inside and outside view
+  function switchStarView(isInsideView) {
+    const positions = geometry.attributes.position.array;
+    let index = 0;
+    
+    for (const star of starMap.values()) {
+      if (isNaN(star.ra) || isNaN(star.dec) || isNaN(star.mag)) continue;
+      
+      const pos = isInsideView ? star.posInside : star.posOutside;
+      positions[index++] = pos.x;
+      positions[index++] = pos.y;
+      positions[index++] = pos.z;
+    }
+    
+    geometry.attributes.position.needsUpdate = true;
+  }
+
   // Function to dispose of geometry and material
   function dispose() {
     geometry.dispose();
@@ -78,5 +95,5 @@ export function createStarField(starMap, opts = {}) {
   }
 
   // Return the result with proper closure
-  return { group, hrLabels, nameLabels, dispose };
+  return { group, hrLabels, nameLabels, dispose, switchStarView };
 }

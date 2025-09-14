@@ -14,12 +14,15 @@ export async function loadStarMap(url = "../../public/stars1000.csv") {
   const radius = 100;
 
   for (const row of data) {
+    const basePos = raDecToVec3(row.ra * 15, row.dec, radius);
     const star = {
       name: row.name?.trim(),
       hr: parseInt(row.hr, 10),
       ra: parseFloat(row.ra) * 15, // hours → degrees
       dec: parseFloat(row.dec),
-      pos: raDecToVec3(row.ra * 15, row.dec, radius).multiplyScalar(-1),
+      pos: basePos.clone().multiplyScalar(-1), // Keep original for compatibility
+      posOutside: basePos.clone(), // Outside view position
+      posInside: basePos.clone().multiplyScalar(-1), // Inside view position
       mag: parseFloat(row.mag),
     };
 

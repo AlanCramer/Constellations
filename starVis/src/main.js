@@ -24,6 +24,7 @@ const {
   hrLabels,
   nameLabels,
   dispose: disposeStarField,
+  switchStarView,
 } = createStarField(starMap, {
   radius: 100,
   labelMag: 3,
@@ -40,6 +41,7 @@ const {
   group: constellations,
   labels: constellationNames,
   dispose: disposeConstellations,
+  switchConstellationView,
 } = createConstellations(edges, starMap);
 
 scene.add(constellations);
@@ -52,7 +54,23 @@ buildUI({
   constellationsGroup: constellations,
   constellationNames,
   controls,
+  camera,
+  switchStarView,
+  switchConstellationView,
 });
+
+// Set initial view to inside view (planetarium) after everything is set up
+switchStarView(true);
+switchConstellationView(true);
+// Set up camera and controls for inside view (matching uiControls.js settings)
+camera.position.set(0, 0, 0);
+controls.target.set(0, 0, 0);
+controls.minDistance = 1;
+controls.maxDistance = 99; // Match uiControls.js
+controls.enableZoom = true; // Match uiControls.js - enable zoom!
+controls.enablePan = true;
+controls.rotateSpeed = 0.5; // Match uiControls.js
+controls.update();
 
 // Track mouse position
 window.addEventListener('mousemove', (event) => {
