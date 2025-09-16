@@ -83,6 +83,7 @@ export function createConstellations(edges, starMap, opts = {}) {
 
   // Function to switch between inside and outside view
   function switchConstellationView(isInsideView) {
+    // Update constellation line positions
     for (const child of group.children) {
       if (child.isLineSegments) {
         const edge = child.userData.edge;
@@ -94,6 +95,39 @@ export function createConstellations(edges, starMap, opts = {}) {
             const pos2 = isInsideView ? s2.posInside : s2.posOutside;
             child.geometry.setFromPoints([pos1, pos2]);
           }
+        }
+      }
+    }
+    
+    // Update constellation label positions
+    for (const [name, mids] of centerMap) {
+      // Find the label for this constellation
+      const label = labelObjects.find(l => l.element.textContent === (CONSTELLATION_NAMES[name] || name));
+      if (label) {
+        // Recalculate center position using current view positions
+        const newCenter = new THREE.Vector3();
+        let edgeCount = 0;
+        
+        // Find all edges for this constellation
+        for (const child of group.children) {
+          if (child.isLineSegments && child.userData.edge && child.userData.edge.name === name) {
+            const edge = child.userData.edge;
+            const s1 = starMap.get(edge.star1);
+            const s2 = starMap.get(edge.star2);
+            if (s1 && s2) {
+              const pos1 = isInsideView ? s1.posInside : s1.posOutside;
+              const pos2 = isInsideView ? s2.posInside : s2.posOutside;
+              const mid = new THREE.Vector3().addVectors(pos1, pos2).multiplyScalar(0.5);
+              newCenter.add(mid);
+              edgeCount++;
+            }
+          }
+        }
+        
+        if (edgeCount > 0) {
+          newCenter.divideScalar(edgeCount);
+          // Update label position
+          label.position.copy(newCenter.normalize().multiplyScalar(radius * 1.02));
         }
       }
     }

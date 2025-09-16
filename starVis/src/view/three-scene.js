@@ -1,4 +1,10 @@
 // three-scene.js
+//This is the scene bootstrap. 
+//It creates the scene, camera, renderers, and controls.
+//If we didn't have this we wouldn't have a 3D space!
+ 
+
+
 import * as THREE from "three";
 import { OrbitControls, CSS2DRenderer } from "three-stdlib";
 

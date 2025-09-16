@@ -1,13 +1,28 @@
-import { loadStarMap } from "./loaders/stars.js";
+
+//initThreeScene is a function that creates the scene, camera, renderers, and controls. Creates 3D world!
 import { initThreeScene } from "./view/three-scene.js";
+
+//loadstarmap is a function that reads the csv and creates a 3D map of star data. (utils is used here to make 3D)
+import { loadStarMap } from "./loaders/stars.js";
+
+//createStarField is a function that creates the star field. It calls starmap from stars.js? (CHLOE how is this different from loadstarmap?)
 import { createStarField } from "./view/createStarField.js";
+
+//function that reads constellation line (edges) data from csv and creates a map of edges. 
 import { loadConstellationEdges } from "./loaders/constellations.js";
+
+//function that makes the constellation lines.
 import { createConstellations } from "./view/createConstellations.js";
+
+//function that builds the UI.
 import { buildUI } from "./dom/uiControls.js";
+
+// This is the entire three.js library. (creates 3D graphics!)
 import * as THREE from "three";
 
-
-const container = document.getElementById("viewer");
+//A container is the div (html element) where the 3D scene will be rendered. 
+const container = document.getElementById("viewer"); //this finds the HTML element with the ID "viewer"
+//CHLOE --but where does it look to find the HTML element with the ID "viewer"? 
 const { scene, camera, renderer, labelRenderer, controls } =
   initThreeScene(container);
 
@@ -26,8 +41,8 @@ const {
   dispose: disposeStarField,
   switchStarView,
 } = createStarField(starMap, {
-  radius: 100,
-  labelMag: 3,
+  radius: 100, //CHLOE --these don't seem to change anything in the UI. 
+  labelMag: 3, //CHLOE --these don't seem to change anything in the UI. 
 });
 
 window.hrLabels = hrLabels;
@@ -59,18 +74,20 @@ buildUI({
   switchConstellationView,
 });
 
+
+//CHLOE turning off inside view for now. (testing)
 // Set initial view to inside view (planetarium) after everything is set up
-switchStarView(true);
-switchConstellationView(true);
+switchStarView(false);
+switchConstellationView(false);
 // Set up camera and controls for inside view (matching uiControls.js settings)
-camera.position.set(0, 0, 0);
+/*camera.position.set(0, 0, 0);
 controls.target.set(0, 0, 0);
 controls.minDistance = 1;
 controls.maxDistance = 99; // Match uiControls.js
 controls.enableZoom = true; // Match uiControls.js - enable zoom!
 controls.enablePan = true;
 controls.rotateSpeed = 0.5; // Match uiControls.js
-controls.update();
+controls.update();*/
 
 // Track mouse position
 window.addEventListener('mousemove', (event) => {

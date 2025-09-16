@@ -1,3 +1,6 @@
+//This creates the star field characteristics, labels, inside and outside view. 
+
+
 // createStarField.js
 import * as THREE from "three";
 import { CSS2DObject } from "three-stdlib";
@@ -27,7 +30,7 @@ export function createStarField(starMap, opts = {}) {
   for (const star of starMap.values()) {
     if (isNaN(star.ra) || isNaN(star.dec) || isNaN(star.mag)) continue;
 
-    // Cache position for the star
+    // Cache position for the star (Chloe - why do we need to do this??)
     const pos = star.pos ?? (star.pos = raDecToVec3(star.ra, star.dec, radius).multiplyScalar(-1));
     positions.push(pos.x, pos.y, pos.z);
     colors.push(1, 1, 1); // Default color is white

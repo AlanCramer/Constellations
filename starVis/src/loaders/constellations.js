@@ -1,3 +1,11 @@
+//This is the loader for the constellation edges. 
+//It loads the constellation edges from the CSV file.
+//It returns a flat array of edges.
+//Each edge is { name: "ORI", star1: 190, star2: 225 }.
+//It is used to create the constellation lines.
+ 
+
+
 import Papa from "papaparse";
 
 /**

@@ -27,6 +27,7 @@ result = result.copy()
 result.loc[:, "hr"] = result["hr"].astype("Int64")
 print(result.dtypes)
 
-result.to_csv("stars1000.csv", index=False)
+result.to_csv("data/stars1000.csv", index=False)
+result.to_csv("public/stars1000.csv", index=False)
 
 print(result.head())
