@@ -9,6 +9,9 @@
  * @param {CSS2DObject[]} targets.constellationNames
  */
 
+import { loadStarSearchIndex, searchStars, getStarByName } from "../search/starSearch.js";
+import { CONSTELLATION_NAMES } from "../../constellation-names.js";
+
 export let useHRNames = false;
 export let useStarNames = false;
 
@@ -21,6 +24,7 @@ export function buildUI({
   camera,
   switchStarView,
   switchConstellationView,
+  
 }) {
   // ---- Create DOM ---------------------------------------------------------
   const panel = document.createElement("div");
@@ -39,10 +43,81 @@ export function buildUI({
   <label><input type="checkbox" id="chk-insideView" checked> Inside View</label><br>
   <label><input type="checkbox" id="chk-autoRotate" > Auto-rotate Sphere</label><br>
   <label>Rotation Speed: <input type="range" id="rotationSpeed" min="0.1" max="3.0" step="0.1" value="0.5" style="width: 100px;"></label>
+
+
+<hr style="margin: 10px 0; border: 1px solid rgba(255,255,255,0.3);">
+<label>Search Stars: <input type="text" id="starSearch" placeholder="Type star name..." style="width: 150px; margin-left: 5px;"></label><br>
+<div id="searchResults" style="margin-top: 5px; max-height: 100px; overflow-y: auto;"></div>
+
+<hr style="margin: 10px 0; border: 1px solid rgba(255,255,255,0.3);">
+<label>Search Constellations: <input type="text" id="constellationSearch" placeholder="Type constellation name..." style="width: 150px; margin-left: 5px;"></label><br>
+<div id="constellationSearchResults" style="margin-top: 5px; max-height: 100px; overflow-y: auto;"></div>
 `;
 
 
   document.body.appendChild(panel);
+
+
+  const searchInput = panel.querySelector("#starSearch");
+  const searchResults = panel.querySelector("#searchResults");
+  const constellationSearchInput = panel.querySelector("#constellationSearch");
+  const constellationSearchResults = panel.querySelector("#constellationSearchResults");
+
+  function displaySearchResults(results) {
+    if (results.length === 0) {
+        searchResults.innerHTML = "<div style='color: #ff6b6b;'>No stars found </div>";
+        return;
+    }
+    
+    searchResults.innerHTML = results.map(star => 
+        `<div style="cursor: pointer; padding: 2px; border-bottom: 1px solid rgba(255,255,255,0.2);" 
+             onclick="zoomToStar('${star.name}')">
+            ${star.name} (Mag: ${star.mag})
+        </div>`
+    ).join('');
+  }
+
+  function displayConstellationSearchResults(results) {
+    if (results.length === 0) {
+        constellationSearchResults.innerHTML = "<div style='color: #ff6b6b;'>No constellations found</div>";
+        return;
+    }
+    
+    constellationSearchResults.innerHTML = results.map(constellation => 
+        `<div style="cursor: pointer; padding: 2px; border-bottom: 1px solid rgba(255,255,255,0.2);" 
+             onclick="console.log('Clicked constellation:', '${constellation.abbr}'); zoomToConstellation('${constellation.abbr}')">
+            ${constellation.fullName}
+        </div>`
+    ).join('');
+  }
+
+  function searchConstellations(query, maxResults = 5) {
+    if (!query || query.trim().length < 2) {
+        return [];
+    }
+
+    const queryLower = query.toLowerCase().trim();
+    const results = [];
+
+    // Search through constellation names (both abbreviations and full names)
+    for (const [abbr, fullName] of Object.entries(CONSTELLATION_NAMES)) {
+        const abbrLower = abbr.toLowerCase();
+        const fullNameLower = fullName.toLowerCase();
+        
+        // Check if query matches abbreviation or full name
+        if (abbrLower.includes(queryLower) || fullNameLower.includes(queryLower)) {
+            results.push({ abbr, fullName });
+            if (results.length >= maxResults) break;
+        }
+    }
+    
+    return results;
+  }
+
+  // Load search index when UI is built
+  loadStarSearchIndex();
+
+
 
   // ---- Wiring helpers -----------------------------------------------------
   function setVisible(objs, on) {
@@ -117,4 +192,26 @@ panel.querySelector("#rotationSpeed").addEventListener("input", (e) => {
 });
 
 
-}
+  // Add search functionality
+  searchInput.addEventListener("input", (e) => {
+    const query = e.target.value.trim();
+    if (query.length >= 2) {
+        const results = searchStars(query, 5);
+        displaySearchResults(results);
+    } else {
+        searchResults.innerHTML = "";
+    }
+  });
+
+  // Add constellation search functionality
+  constellationSearchInput.addEventListener("input", (e) => {
+    const query = e.target.value.trim();
+    if (query.length >= 2) {
+        const results = searchConstellations(query, 5);
+        displayConstellationSearchResults(results);
+    } else {
+        constellationSearchResults.innerHTML = "";
+    }
+  });
+
+}  // This closes the buildUI function

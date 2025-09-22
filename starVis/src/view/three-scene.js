@@ -48,8 +48,8 @@ export function initThreeScene(container, opts = {}) {
   controls.zoomSpeed = 1.0;
   controls.panSpeed = 0.8;
   controls.target.set(0, 0, 0); // Center the target at origin
-  controls.minDistance = 60;
-  controls.maxDistance = 300;
+  controls.minDistance = 50;
+  controls.maxDistance = 280;
   controls.enableZoom = true;
   controls.enablePan = false;
   // Auto-rotation settings

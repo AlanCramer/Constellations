@@ -76,7 +76,7 @@ export function createConstellations(edges, starMap, opts = {}) {
   group.resetHighlight = function () {
     for (const lines of constellationMap.values()) {
       for (const line of lines) {
-        line.material.color.setHex(0x88ccff);
+        line.material.color.setHex(0xffffff); // Reset to white (default color)
       }
     }
   };
