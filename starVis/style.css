@@ -13,7 +13,7 @@ body {
 /* Add this CSS to your stylesheet */
 .hr-star-label {
   font-family: Arial, sans-serif;
-  font-size: 15px; /* Adjust as necessary */
+  font-size: 11px; /* Adjust as necessary */
   color: #ffffff; /* White text for better visibility */
   text-align: center;
   user-select: none;
@@ -21,7 +21,7 @@ body {
 
 .star-name {
   font-family: Arial, sans-serif;
-  font-size: 20px; /* Adjust as necessary */
+  font-size: 12px; /* Adjust as necessary */
   color: #ffffff; 
   text-align: center;
   user-select: none;

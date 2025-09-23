@@ -1,0 +1,2242 @@
+{
+  "sirius": {
+    "name": "Sirius",
+    "hr": 2491.0,
+    "ra": 6.752481,
+    "dec": -16.716116,
+    "mag": -1.44
+  },
+  "canopus": {
+    "name": "Canopus",
+    "hr": 2326.0,
+    "ra": 6.399195,
+    "dec": -52.69566,
+    "mag": -0.62
+  },
+  "arcturus": {
+    "name": "Arcturus",
+    "hr": 5340.0,
+    "ra": 14.26103,
+    "dec": 19.18241,
+    "mag": -0.05
+  },
+  "rigil kentaurus": {
+    "name": "Rigil Kentaurus",
+    "hr": 5459.0,
+    "ra": 14.660765,
+    "dec": -60.833976,
+    "mag": -0.01
+  },
+  "vega": {
+    "name": "Vega",
+    "hr": 7001.0,
+    "ra": 18.61564,
+    "dec": 38.783692,
+    "mag": 0.03
+  },
+  "capella": {
+    "name": "Capella",
+    "hr": 1708.0,
+    "ra": 5.27815,
+    "dec": 45.997991,
+    "mag": 0.08
+  },
+  "rigel": {
+    "name": "Rigel",
+    "hr": 1713.0,
+    "ra": 5.242298,
+    "dec": -8.20164,
+    "mag": 0.18
+  },
+  "procyon": {
+    "name": "Procyon",
+    "hr": 2943.0,
+    "ra": 7.655033,
+    "dec": 5.224993,
+    "mag": 0.4
+  },
+  "achernar": {
+    "name": "Achernar",
+    "hr": 472.0,
+    "ra": 1.628556,
+    "dec": -57.236757,
+    "mag": 0.45
+  },
+  "betelgeuse": {
+    "name": "Betelgeuse",
+    "hr": 2061.0,
+    "ra": 5.919529,
+    "dec": 7.407063,
+    "mag": 0.45
+  },
+  "hadar": {
+    "name": "Hadar",
+    "hr": 5267.0,
+    "ra": 14.063729,
+    "dec": -60.373039,
+    "mag": 0.61
+  },
+  "altair": {
+    "name": "Altair",
+    "hr": 7557.0,
+    "ra": 19.846388,
+    "dec": 8.868322,
+    "mag": 0.76
+  },
+  "acrux": {
+    "name": "Acrux",
+    "hr": 4730.0,
+    "ra": 12.443311,
+    "dec": -63.099092,
+    "mag": 0.77
+  },
+  "aldebaran": {
+    "name": "Aldebaran",
+    "hr": 1457.0,
+    "ra": 4.598677,
+    "dec": 16.509301,
+    "mag": 0.87
+  },
+  "spica": {
+    "name": "Spica",
+    "hr": 5056.0,
+    "ra": 13.419883,
+    "dec": -11.161322,
+    "mag": 0.98
+  },
+  "antares": {
+    "name": "Antares",
+    "hr": 6134.0,
+    "ra": 16.490128,
+    "dec": -26.432002,
+    "mag": 1.06
+  },
+  "pollux": {
+    "name": "Pollux",
+    "hr": 2990.0,
+    "ra": 7.755277,
+    "dec": 28.026199,
+    "mag": 1.16
+  },
+  "fomalhaut": {
+    "name": "Fomalhaut",
+    "hr": 8728.0,
+    "ra": 22.960838,
+    "dec": -29.622236,
+    "mag": 1.17
+  },
+  "mimosa": {
+    "name": "Mimosa",
+    "hr": 4853.0,
+    "ra": 12.795359,
+    "dec": -59.688764,
+    "mag": 1.25
+  },
+  "deneb": {
+    "name": "Deneb",
+    "hr": 7924.0,
+    "ra": 20.690532,
+    "dec": 45.280338,
+    "mag": 1.25
+  },
+  "toliman": {
+    "name": "Toliman",
+    "hr": 5460.0,
+    "ra": 14.660346,
+    "dec": -60.8383,
+    "mag": 1.35
+  },
+  "regulus": {
+    "name": "Regulus",
+    "hr": 3982.0,
+    "ra": 10.139532,
+    "dec": 11.967207,
+    "mag": 1.36
+  },
+  "adhara": {
+    "name": "Adhara",
+    "hr": 2618.0,
+    "ra": 6.977097,
+    "dec": -28.972084,
+    "mag": 1.5
+  },
+  "castor": {
+    "name": "Castor",
+    "hr": 2891.0,
+    "ra": 7.576634,
+    "dec": 31.888276,
+    "mag": 1.58
+  },
+  "gacrux": {
+    "name": "Gacrux",
+    "hr": 4763.0,
+    "ra": 12.519429,
+    "dec": -57.113212,
+    "mag": 1.59
+  },
+  "shaula": {
+    "name": "Shaula",
+    "hr": 6527.0,
+    "ra": 17.560145,
+    "dec": -37.103821,
+    "mag": 1.62
+  },
+  "bellatrix": {
+    "name": "Bellatrix",
+    "hr": 1790.0,
+    "ra": 5.418851,
+    "dec": 6.349702,
+    "mag": 1.64
+  },
+  "elnath": {
+    "name": "Elnath",
+    "hr": 1791.0,
+    "ra": 5.438198,
+    "dec": 28.60745,
+    "mag": 1.65
+  },
+  "miaplacidus": {
+    "name": "Miaplacidus",
+    "hr": 3685.0,
+    "ra": 9.220041,
+    "dec": -69.717208,
+    "mag": 1.67
+  },
+  "alnilam": {
+    "name": "Alnilam",
+    "hr": 1903.0,
+    "ra": 5.603559,
+    "dec": -1.20192,
+    "mag": 1.69
+  },
+  "alnair": {
+    "name": "Alnair",
+    "hr": 8425.0,
+    "ra": 22.137209,
+    "dec": -46.960975,
+    "mag": 1.73
+  },
+  "alnitak": {
+    "name": "Alnitak",
+    "hr": 1948.0,
+    "ra": 5.679313,
+    "dec": -1.942572,
+    "mag": 1.74
+  },
+  "alioth": {
+    "name": "Alioth",
+    "hr": 4905.0,
+    "ra": 12.900472,
+    "dec": 55.959821,
+    "mag": 1.76
+  },
+  "mirfak": {
+    "name": "Mirfak",
+    "hr": 1017.0,
+    "ra": 3.405378,
+    "dec": 49.86118,
+    "mag": 1.79
+  },
+  "kaus australis": {
+    "name": "Kaus Australis",
+    "hr": 6879.0,
+    "ra": 18.402868,
+    "dec": -34.384616,
+    "mag": 1.79
+  },
+  "dubhe": {
+    "name": "Dubhe",
+    "hr": 4301.0,
+    "ra": 11.062155,
+    "dec": 61.751033,
+    "mag": 1.81
+  },
+  "wezen": {
+    "name": "Wezen",
+    "hr": 2693.0,
+    "ra": 7.139857,
+    "dec": -26.3932,
+    "mag": 1.83
+  },
+  "alkaid": {
+    "name": "Alkaid",
+    "hr": 5191.0,
+    "ra": 13.792354,
+    "dec": 49.313265,
+    "mag": 1.85
+  },
+  "sargas": {
+    "name": "Sargas",
+    "hr": 6553.0,
+    "ra": 17.62198,
+    "dec": -42.997824,
+    "mag": 1.86
+  },
+  "avior": {
+    "name": "Avior",
+    "hr": 3307.0,
+    "ra": 8.375236,
+    "dec": -59.509483,
+    "mag": 1.86
+  },
+  "menkalinan": {
+    "name": "Menkalinan",
+    "hr": 2088.0,
+    "ra": 5.992149,
+    "dec": 44.947433,
+    "mag": 1.9
+  },
+  "atria": {
+    "name": "Atria",
+    "hr": 6217.0,
+    "ra": 16.811077,
+    "dec": -69.027715,
+    "mag": 1.91
+  },
+  "alsephina": {
+    "name": "Alsephina",
+    "hr": 3485.0,
+    "ra": 8.745059,
+    "dec": -54.708821,
+    "mag": 1.93
+  },
+  "alhena": {
+    "name": "Alhena",
+    "hr": 2421.0,
+    "ra": 6.628528,
+    "dec": 16.399252,
+    "mag": 1.93
+  },
+  "peacock": {
+    "name": "Peacock",
+    "hr": 7790.0,
+    "ra": 20.427459,
+    "dec": -56.73509,
+    "mag": 1.94
+  },
+  "polaris": {
+    "name": "Polaris",
+    "hr": 424.0,
+    "ra": 2.52975,
+    "dec": 89.264109,
+    "mag": 1.97
+  },
+  "mirzam": {
+    "name": "Mirzam",
+    "hr": 2294.0,
+    "ra": 6.378329,
+    "dec": -17.955918,
+    "mag": 1.98
+  },
+  "alphard": {
+    "name": "Alphard",
+    "hr": 3748.0,
+    "ra": 9.45979,
+    "dec": -8.658603,
+    "mag": 1.99
+  },
+  "hamal": {
+    "name": "Hamal",
+    "hr": 617.0,
+    "ra": 2.119555,
+    "dec": 23.462423,
+    "mag": 2.01
+  },
+  "algieba": {
+    "name": "Algieba",
+    "hr": 4057.0,
+    "ra": 10.332873,
+    "dec": 19.841489,
+    "mag": 2.01
+  },
+  "diphda": {
+    "name": "Diphda",
+    "hr": 188.0,
+    "ra": 0.72649,
+    "dec": -17.986605,
+    "mag": 2.04
+  },
+  "nunki": {
+    "name": "Nunki",
+    "hr": 7121.0,
+    "ra": 18.92109,
+    "dec": -26.296722,
+    "mag": 2.05
+  },
+  "menkent": {
+    "name": "Menkent",
+    "hr": 5288.0,
+    "ra": 14.111395,
+    "dec": -36.369954,
+    "mag": 2.06
+  },
+  "alpheratz": {
+    "name": "Alpheratz",
+    "hr": 15.0,
+    "ra": 0.139791,
+    "dec": 29.090432,
+    "mag": 2.07
+  },
+  "tiaki": {
+    "name": "Tiaki",
+    "hr": 8636.0,
+    "ra": 22.711115,
+    "dec": -46.884577,
+    "mag": 2.07
+  },
+  "saiph": {
+    "name": "Saiph",
+    "hr": 2004.0,
+    "ra": 5.795941,
+    "dec": -9.669605,
+    "mag": 2.07
+  },
+  "mirach": {
+    "name": "Mirach",
+    "hr": 337.0,
+    "ra": 1.162194,
+    "dec": 35.620558,
+    "mag": 2.07
+  },
+  "kochab": {
+    "name": "Kochab",
+    "hr": 5563.0,
+    "ra": 14.845105,
+    "dec": 74.155505,
+    "mag": 2.07
+  },
+  "rasalhague": {
+    "name": "Rasalhague",
+    "hr": 6556.0,
+    "ra": 17.582241,
+    "dec": 12.560035,
+    "mag": 2.08
+  },
+  "algol": {
+    "name": "Algol",
+    "hr": 936.0,
+    "ra": 3.136148,
+    "dec": 40.955648,
+    "mag": 2.09
+  },
+  "almach": {
+    "name": "Almach",
+    "hr": 603.0,
+    "ra": 2.064984,
+    "dec": 42.329725,
+    "mag": 2.1
+  },
+  "denebola": {
+    "name": "Denebola",
+    "hr": 4534.0,
+    "ra": 11.817663,
+    "dec": 14.57206,
+    "mag": 2.14
+  },
+  "cih": {
+    "name": "Cih",
+    "hr": 264.0,
+    "ra": 0.945143,
+    "dec": 60.71674,
+    "mag": 2.15
+  },
+  "aspidiske": {
+    "name": "Aspidiske",
+    "hr": 3699.0,
+    "ra": 9.284838,
+    "dec": -59.275229,
+    "mag": 2.21
+  },
+  "naos": {
+    "name": "Naos",
+    "hr": 3165.0,
+    "ra": 8.059737,
+    "dec": -40.003148,
+    "mag": 2.21
+  },
+  "alphecca": {
+    "name": "Alphecca",
+    "hr": 5793.0,
+    "ra": 15.578128,
+    "dec": 26.714693,
+    "mag": 2.22
+  },
+  "mizar": {
+    "name": "Mizar",
+    "hr": 5054.0,
+    "ra": 13.398747,
+    "dec": 54.925362,
+    "mag": 2.23
+  },
+  "suhail": {
+    "name": "Suhail",
+    "hr": 3634.0,
+    "ra": 9.133268,
+    "dec": -43.432589,
+    "mag": 2.23
+  },
+  "sadr": {
+    "name": "Sadr",
+    "hr": 7796.0,
+    "ra": 20.370473,
+    "dec": 40.256679,
+    "mag": 2.23
+  },
+  "schedar": {
+    "name": "Schedar",
+    "hr": 168.0,
+    "ra": 0.675116,
+    "dec": 56.537331,
+    "mag": 2.24
+  },
+  "eltanin": {
+    "name": "Eltanin",
+    "hr": 6705.0,
+    "ra": 17.943437,
+    "dec": 51.488895,
+    "mag": 2.24
+  },
+  "mintaka": {
+    "name": "Mintaka",
+    "hr": 1852.0,
+    "ra": 5.533445,
+    "dec": -0.299092,
+    "mag": 2.25
+  },
+  "caph": {
+    "name": "Caph",
+    "hr": 21.0,
+    "ra": 0.152887,
+    "dec": 59.14978,
+    "mag": 2.28
+  },
+  "larawag": {
+    "name": "Larawag",
+    "hr": 6241.0,
+    "ra": 16.83608,
+    "dec": -34.293232,
+    "mag": 2.29
+  },
+  "dschubba": {
+    "name": "Dschubba",
+    "hr": 5953.0,
+    "ra": 16.005557,
+    "dec": -22.62171,
+    "mag": 2.29
+  },
+  "uridim": {
+    "name": "Uridim",
+    "hr": 5469.0,
+    "ra": 14.698823,
+    "dec": -47.3882,
+    "mag": 2.3
+  },
+  "merak": {
+    "name": "Merak",
+    "hr": 4295.0,
+    "ra": 11.030677,
+    "dec": 56.382427,
+    "mag": 2.34
+  },
+  "izar": {
+    "name": "Izar",
+    "hr": 5505.0,
+    "ra": 14.749784,
+    "dec": 27.074222,
+    "mag": 2.35
+  },
+  "enif": {
+    "name": "Enif",
+    "hr": 8308.0,
+    "ra": 21.736433,
+    "dec": 9.875011,
+    "mag": 2.38
+  },
+  "ankaa": {
+    "name": "Ankaa",
+    "hr": 99.0,
+    "ra": 0.438056,
+    "dec": -42.305981,
+    "mag": 2.4
+  },
+  "phecda": {
+    "name": "Phecda",
+    "hr": 4554.0,
+    "ra": 11.897168,
+    "dec": 53.69476,
+    "mag": 2.41
+  },
+  "sabik": {
+    "name": "Sabik",
+    "hr": 6378.0,
+    "ra": 17.172968,
+    "dec": -15.72491,
+    "mag": 2.43
+  },
+  "scheat": {
+    "name": "Scheat",
+    "hr": 8775.0,
+    "ra": 23.062901,
+    "dec": 28.082789,
+    "mag": 2.44
+  },
+  "alderamin": {
+    "name": "Alderamin",
+    "hr": 8162.0,
+    "ra": 21.30963,
+    "dec": 62.585573,
+    "mag": 2.45
+  },
+  "aludra": {
+    "name": "Aludra",
+    "hr": 2827.0,
+    "ra": 7.401584,
+    "dec": -29.303104,
+    "mag": 2.45
+  },
+  "markeb": {
+    "name": "Markeb",
+    "hr": 3734.0,
+    "ra": 9.368562,
+    "dec": -55.010668,
+    "mag": 2.47
+  },
+  "aljanah": {
+    "name": "Aljanah",
+    "hr": 7949.0,
+    "ra": 20.770178,
+    "dec": 33.970256,
+    "mag": 2.48
+  },
+  "markab": {
+    "name": "Markab",
+    "hr": 8781.0,
+    "ra": 23.079348,
+    "dec": 15.205264,
+    "mag": 2.49
+  },
+  "menkar": {
+    "name": "Menkar",
+    "hr": 911.0,
+    "ra": 3.037992,
+    "dec": 4.089734,
+    "mag": 2.54
+  },
+  "leepwal": {
+    "name": "Leepwal",
+    "hr": 5231.0,
+    "ra": 13.925667,
+    "dec": -47.288375,
+    "mag": 2.55
+  },
+  "zosma": {
+    "name": "Zosma",
+    "hr": 4357.0,
+    "ra": 11.235138,
+    "dec": 20.523717,
+    "mag": 2.56
+  },
+  "acrab": {
+    "name": "Acrab",
+    "hr": 5984.0,
+    "ra": 16.09062,
+    "dec": -19.805453,
+    "mag": 2.56
+  },
+  "gienah": {
+    "name": "Gienah",
+    "hr": 4662.0,
+    "ra": 12.263437,
+    "dec": -17.541929,
+    "mag": 2.58
+  },
+  "arneb": {
+    "name": "Arneb",
+    "hr": 1865.0,
+    "ra": 5.545504,
+    "dec": -17.822289,
+    "mag": 2.58
+  },
+  "ascella": {
+    "name": "Ascella",
+    "hr": 7194.0,
+    "ra": 19.043532,
+    "dec": -29.880105,
+    "mag": 2.6
+  },
+  "zubeneschamali": {
+    "name": "Zubeneschamali",
+    "hr": 5685.0,
+    "ra": 15.283449,
+    "dec": -9.382917,
+    "mag": 2.61
+  },
+  "unukalhai": {
+    "name": "Unukalhai",
+    "hr": 5854.0,
+    "ra": 15.737798,
+    "dec": 6.425627,
+    "mag": 2.63
+  },
+  "sheratan": {
+    "name": "Sheratan",
+    "hr": 553.0,
+    "ra": 1.910668,
+    "dec": 20.808035,
+    "mag": 2.64
+  },
+  "kraz": {
+    "name": "Kraz",
+    "hr": 4786.0,
+    "ra": 12.573121,
+    "dec": -23.396759,
+    "mag": 2.65
+  },
+  "phact": {
+    "name": "Phact",
+    "hr": 1956.0,
+    "ra": 5.660817,
+    "dec": -34.074108,
+    "mag": 2.65
+  },
+  "mahasim": {
+    "name": "Mahasim",
+    "hr": 2095.0,
+    "ra": 5.995351,
+    "dec": 37.212585,
+    "mag": 2.65
+  },
+  "ruchbah": {
+    "name": "Ruchbah",
+    "hr": 403.0,
+    "ra": 1.430216,
+    "dec": 60.235283,
+    "mag": 2.66
+  },
+  "muphrid": {
+    "name": "Muphrid",
+    "hr": 5235.0,
+    "ra": 13.911411,
+    "dec": 18.397717,
+    "mag": 2.68
+  },
+  "hassaleh": {
+    "name": "Hassaleh",
+    "hr": 1577.0,
+    "ra": 4.949894,
+    "dec": 33.16609,
+    "mag": 2.69
+  },
+  "lesath": {
+    "name": "Lesath",
+    "hr": 6508.0,
+    "ra": 17.512732,
+    "dec": -37.295811,
+    "mag": 2.7
+  },
+  "kaus media": {
+    "name": "Kaus Media",
+    "hr": 6859.0,
+    "ra": 18.3499,
+    "dec": -29.828103,
+    "mag": 2.72
+  },
+  "tarazed": {
+    "name": "Tarazed",
+    "hr": 7525.0,
+    "ra": 19.770994,
+    "dec": 10.613261,
+    "mag": 2.72
+  },
+  "yed prior": {
+    "name": "Yed Prior",
+    "hr": 6056.0,
+    "ra": 16.239094,
+    "dec": -3.694323,
+    "mag": 2.73
+  },
+  "athebyne": {
+    "name": "Athebyne",
+    "hr": 6132.0,
+    "ra": 16.39986,
+    "dec": 61.514213,
+    "mag": 2.73
+  },
+  "porrima": {
+    "name": "Porrima",
+    "hr": 4825.0,
+    "ra": 12.694345,
+    "dec": -1.449375,
+    "mag": 2.74
+  },
+  "hatysa": {
+    "name": "Hatysa",
+    "hr": 1899.0,
+    "ra": 5.590551,
+    "dec": -5.909901,
+    "mag": 2.75
+  },
+  "zubenelgenubi": {
+    "name": "Zubenelgenubi",
+    "hr": 5531.0,
+    "ra": 14.847977,
+    "dec": -16.041778,
+    "mag": 2.75
+  },
+  "kulou": {
+    "name": "Kulou",
+    "hr": 5028.0,
+    "ra": 13.343296,
+    "dec": -36.712295,
+    "mag": 2.75
+  },
+  "cebalrai": {
+    "name": "Cebalrai",
+    "hr": 6603.0,
+    "ra": 17.724543,
+    "dec": 4.567303,
+    "mag": 2.76
+  },
+  "rasalgethi": {
+    "name": "Rasalgethi",
+    "hr": 6406.0,
+    "ra": 17.244127,
+    "dec": 14.390333,
+    "mag": 2.78
+  },
+  "kornephoros": {
+    "name": "Kornephoros",
+    "hr": 6148.0,
+    "ra": 16.503668,
+    "dec": 21.489613,
+    "mag": 2.78
+  },
+  "cursa": {
+    "name": "Cursa",
+    "hr": 1666.0,
+    "ra": 5.130829,
+    "dec": -5.086446,
+    "mag": 2.78
+  },
+  "imai": {
+    "name": "Imai",
+    "hr": 4656.0,
+    "ra": 12.252427,
+    "dec": -58.748928,
+    "mag": 2.79
+  },
+  "rastaban": {
+    "name": "Rastaban",
+    "hr": 6536.0,
+    "ra": 17.507213,
+    "dec": 52.301387,
+    "mag": 2.79
+  },
+  "nihal": {
+    "name": "Nihal",
+    "hr": 1829.0,
+    "ra": 5.470756,
+    "dec": -20.759441,
+    "mag": 2.81
+  },
+  "kaus borealis": {
+    "name": "Kaus Borealis",
+    "hr": 6913.0,
+    "ra": 18.466179,
+    "dec": -25.4217,
+    "mag": 2.82
+  },
+  "paikauhale": {
+    "name": "Paikauhale",
+    "hr": 6165.0,
+    "ra": 16.598043,
+    "dec": -28.216016,
+    "mag": 2.82
+  },
+  "tureis": {
+    "name": "Tureis",
+    "hr": 3185.0,
+    "ra": 8.125737,
+    "dec": -24.304324,
+    "mag": 2.83
+  },
+  "algenib": {
+    "name": "Algenib",
+    "hr": 39.0,
+    "ra": 0.220598,
+    "dec": 15.183596,
+    "mag": 2.83
+  },
+  "deneb algedi": {
+    "name": "Deneb Algedi",
+    "hr": 8322.0,
+    "ra": 21.784011,
+    "dec": -16.127286,
+    "mag": 2.85
+  },
+  "alcyone": {
+    "name": "Alcyone",
+    "hr": 1165.0,
+    "ra": 3.79141,
+    "dec": 24.105137,
+    "mag": 2.85
+  },
+  "vindemiatrix": {
+    "name": "Vindemiatrix",
+    "hr": 4932.0,
+    "ra": 13.036278,
+    "dec": 10.95915,
+    "mag": 2.85
+  },
+  "castor b": {
+    "name": "Castor B",
+    "hr": 2890.0,
+    "ra": 7.576827,
+    "dec": 31.89052,
+    "mag": 2.85
+  },
+  "fawaris": {
+    "name": "Fawaris",
+    "hr": 7528.0,
+    "ra": 19.749574,
+    "dec": 45.13081,
+    "mag": 2.86
+  },
+  "tejat": {
+    "name": "Tejat",
+    "hr": 2286.0,
+    "ra": 6.382673,
+    "dec": 22.513586,
+    "mag": 2.87
+  },
+  "lang-exster": {
+    "name": "Lang-Exster",
+    "hr": 8502.0,
+    "ra": 22.308371,
+    "dec": -60.259587,
+    "mag": 2.87
+  },
+  "acamar": {
+    "name": "Acamar",
+    "hr": 897.0,
+    "ra": 2.971023,
+    "dec": -40.304672,
+    "mag": 2.88
+  },
+  "albaldah": {
+    "name": "Albaldah",
+    "hr": 7264.0,
+    "ra": 19.162731,
+    "dec": -21.023615,
+    "mag": 2.88
+  },
+  "gomeisa": {
+    "name": "Gomeisa",
+    "hr": 2845.0,
+    "ra": 7.452512,
+    "dec": 8.289315,
+    "mag": 2.89
+  },
+  "cor caroli": {
+    "name": "Cor Caroli",
+    "hr": 4915.0,
+    "ra": 12.933807,
+    "dec": 38.31838,
+    "mag": 2.89
+  },
+  "fang": {
+    "name": "Fang",
+    "hr": 5944.0,
+    "ra": 15.980865,
+    "dec": -26.114105,
+    "mag": 2.89
+  },
+  "sadalsuud": {
+    "name": "Sadalsuud",
+    "hr": 8232.0,
+    "ra": 21.525982,
+    "dec": -5.571172,
+    "mag": 2.9
+  },
+  "alniyat": {
+    "name": "Alniyat",
+    "hr": 6084.0,
+    "ra": 16.353143,
+    "dec": -25.592796,
+    "mag": 2.9
+  },
+  "matar": {
+    "name": "Matar",
+    "hr": 8650.0,
+    "ra": 22.716704,
+    "dec": 30.221245,
+    "mag": 2.93
+  },
+  "algorab": {
+    "name": "Algorab",
+    "hr": 4757.0,
+    "ra": 12.497739,
+    "dec": -16.515432,
+    "mag": 2.94
+  },
+  "sadalmelik": {
+    "name": "Sadalmelik",
+    "hr": 8414.0,
+    "ra": 22.096399,
+    "dec": -0.319851,
+    "mag": 2.95
+  },
+  "ras elased australis": {
+    "name": "Ras Elased Australis",
+    "hr": 3873.0,
+    "ra": 9.764188,
+    "dec": 23.774255,
+    "mag": 2.97
+  },
+  "tianguan": {
+    "name": "Tianguan",
+    "hr": 1910.0,
+    "ra": 5.627413,
+    "dec": 21.142549,
+    "mag": 2.97
+  },
+  "zaurak": {
+    "name": "Zaurak",
+    "hr": 1231.0,
+    "ra": 3.967157,
+    "dec": -13.508515,
+    "mag": 2.97
+  },
+  "alnasl": {
+    "name": "Alnasl",
+    "hr": 6746.0,
+    "ra": 18.096803,
+    "dec": -30.424091,
+    "mag": 2.98
+  },
+  "okab": {
+    "name": "Okab",
+    "hr": 7235.0,
+    "ra": 19.090169,
+    "dec": 13.863478,
+    "mag": 2.99
+  },
+  "pherkad": {
+    "name": "Pherkad",
+    "hr": 5735.0,
+    "ra": 15.345483,
+    "dec": 71.834016,
+    "mag": 3.0
+  },
+  "xamidimura": {
+    "name": "Xamidimura",
+    "hr": 6247.0,
+    "ra": 16.864509,
+    "dec": -38.04738,
+    "mag": 3.0
+  },
+  "aldhanab": {
+    "name": "Aldhanab",
+    "hr": 8353.0,
+    "ra": 21.898808,
+    "dec": -37.364852,
+    "mag": 3.0
+  },
+  "furud": {
+    "name": "Furud",
+    "hr": 2282.0,
+    "ra": 6.338553,
+    "dec": -30.063367,
+    "mag": 3.02
+  },
+  "almaaz": {
+    "name": "Almaaz",
+    "hr": 1605.0,
+    "ra": 5.032815,
+    "dec": 43.823308,
+    "mag": 3.03
+  },
+  "seginus": {
+    "name": "Seginus",
+    "hr": 5435.0,
+    "ra": 14.534636,
+    "dec": 38.308253,
+    "mag": 3.04
+  },
+  "dabih": {
+    "name": "Dabih",
+    "hr": 7776.0,
+    "ra": 20.350187,
+    "dec": -14.781367,
+    "mag": 3.05
+  },
+  "albireo": {
+    "name": "Albireo",
+    "hr": 7417.0,
+    "ra": 19.512023,
+    "dec": 27.959681,
+    "mag": 3.05
+  },
+  "mebsuta": {
+    "name": "Mebsuta",
+    "hr": 2473.0,
+    "ra": 6.732202,
+    "dec": 25.131124,
+    "mag": 3.06
+  },
+  "tania australis": {
+    "name": "Tania Australis",
+    "hr": 4069.0,
+    "ra": 10.372155,
+    "dec": 41.499516,
+    "mag": 3.06
+  },
+  "altais": {
+    "name": "Altais",
+    "hr": 7310.0,
+    "ra": 19.209225,
+    "dec": 67.661541,
+    "mag": 3.07
+  },
+  "wazn": {
+    "name": "Wazn",
+    "hr": 2040.0,
+    "ra": 5.849329,
+    "dec": -35.768309,
+    "mag": 3.12
+  },
+  "talitha": {
+    "name": "Talitha",
+    "hr": 3569.0,
+    "ra": 8.986828,
+    "dec": 48.041826,
+    "mag": 3.12
+  },
+  "sarin": {
+    "name": "Sarin",
+    "hr": 6410.0,
+    "ra": 17.250531,
+    "dec": 24.839204,
+    "mag": 3.12
+  },
+  "aldhibah": {
+    "name": "Aldhibah",
+    "hr": 6396.0,
+    "ra": 17.146448,
+    "dec": 65.714683,
+    "mag": 3.17
+  },
+  "pipit": {
+    "name": "Pipit",
+    "hr": 2451.0,
+    "ra": 6.629353,
+    "dec": -43.195934,
+    "mag": 3.17
+  },
+  "xami": {
+    "name": "Xami",
+    "hr": 5463.0,
+    "ra": 14.708492,
+    "dec": -64.975138,
+    "mag": 3.18
+  },
+  "haedus": {
+    "name": "Haedus",
+    "hr": 1641.0,
+    "ra": 5.10858,
+    "dec": 41.234474,
+    "mag": 3.18
+  },
+  "tabit": {
+    "name": "Tabit",
+    "hr": 1543.0,
+    "ra": 4.830669,
+    "dec": 6.961276,
+    "mag": 3.19
+  },
+  "fuyue": {
+    "name": "Fuyue",
+    "hr": 6630.0,
+    "ra": 17.830965,
+    "dec": -37.043304,
+    "mag": 3.19
+  },
+  "errai": {
+    "name": "Errai",
+    "hr": 8974.0,
+    "ra": 23.65582,
+    "dec": 77.632276,
+    "mag": 3.21
+  },
+  "alfirk": {
+    "name": "Alfirk",
+    "hr": 8238.0,
+    "ra": 21.477662,
+    "dec": 70.560716,
+    "mag": 3.23
+  },
+  "yed posterior": {
+    "name": "Yed Posterior",
+    "hr": 6075.0,
+    "ra": 16.305358,
+    "dec": -4.692511,
+    "mag": 3.23
+  },
+  "antinous": {
+    "name": "Antinous",
+    "hr": 7710.0,
+    "ra": 20.188413,
+    "dec": -0.821461,
+    "mag": 3.24
+  },
+  "brachium": {
+    "name": "Brachium",
+    "hr": 5603.0,
+    "ra": 15.067839,
+    "dec": -25.281965,
+    "mag": 3.25
+  },
+  "sulafat": {
+    "name": "Sulafat",
+    "hr": 7178.0,
+    "ra": 18.982395,
+    "dec": 32.689557,
+    "mag": 3.25
+  },
+  "skat": {
+    "name": "Skat",
+    "hr": 8709.0,
+    "ra": 22.910837,
+    "dec": -15.82082,
+    "mag": 3.27
+  },
+  "edasich": {
+    "name": "Edasich",
+    "hr": 5744.0,
+    "ra": 15.415494,
+    "dec": 58.966065,
+    "mag": 3.29
+  },
+  "propus": {
+    "name": "Propus",
+    "hr": 2216.0,
+    "ra": 6.247961,
+    "dec": 22.506799,
+    "mag": 3.31
+  },
+  "megrez": {
+    "name": "Megrez",
+    "hr": 4660.0,
+    "ra": 12.257086,
+    "dec": 57.032617,
+    "mag": 3.32
+  },
+  "rhombus": {
+    "name": "Rhombus",
+    "hr": 1336.0,
+    "ra": 4.240404,
+    "dec": -62.473858,
+    "mag": 3.33
+  },
+  "chertan": {
+    "name": "Chertan",
+    "hr": 4359.0,
+    "ra": 11.237335,
+    "dec": 15.42957,
+    "mag": 3.33
+  },
+  "azmidi": {
+    "name": "Azmidi",
+    "hr": 3045.0,
+    "ra": 7.821571,
+    "dec": -24.859786,
+    "mag": 3.34
+  },
+  "segin": {
+    "name": "Segin",
+    "hr": 542.0,
+    "ra": 1.906584,
+    "dec": 63.670101,
+    "mag": 3.35
+  },
+  "alzirr": {
+    "name": "Alzirr",
+    "hr": 2484.0,
+    "ra": 6.754824,
+    "dec": 12.895591,
+    "mag": 3.35
+  },
+  "muscida": {
+    "name": "Muscida",
+    "hr": 3323.0,
+    "ra": 8.504431,
+    "dec": 60.718169,
+    "mag": 3.35
+  },
+  "ashlesha": {
+    "name": "Ashlesha",
+    "hr": 3482.0,
+    "ra": 8.779587,
+    "dec": 6.418809,
+    "mag": 3.38
+  },
+  "heze": {
+    "name": "Heze",
+    "hr": 5107.0,
+    "ra": 13.57822,
+    "dec": -0.59582,
+    "mag": 3.38
+  },
+  "minelauva": {
+    "name": "Minelauva",
+    "hr": 4910.0,
+    "ra": 12.926725,
+    "dec": 3.39747,
+    "mag": 3.39
+  },
+  "meissa": {
+    "name": "Meissa",
+    "hr": 1879.0,
+    "ra": 5.585633,
+    "dec": 9.934158,
+    "mag": 3.39
+  },
+  "chamukuy": {
+    "name": "Chamukuy",
+    "hr": 1412.0,
+    "ra": 4.477705,
+    "dec": 15.870883,
+    "mag": 3.4
+  },
+  "homam": {
+    "name": "Homam",
+    "hr": 8634.0,
+    "ra": 22.691033,
+    "dec": 10.831364,
+    "mag": 3.41
+  },
+  "heng": {
+    "name": "Heng",
+    "hr": 5190.0,
+    "ra": 13.825078,
+    "dec": -41.687709,
+    "mag": 3.41
+  },
+  "mothallah": {
+    "name": "Mothallah",
+    "hr": 544.0,
+    "ra": 1.884696,
+    "dec": 29.578829,
+    "mag": 3.42
+  },
+  "adhafera": {
+    "name": "Adhafera",
+    "hr": 4031.0,
+    "ra": 10.278171,
+    "dec": 23.417311,
+    "mag": 3.43
+  },
+  "tania borealis": {
+    "name": "Tania Borealis",
+    "hr": 4033.0,
+    "ra": 10.284952,
+    "dec": 42.914365,
+    "mag": 3.45
+  },
+  "achird": {
+    "name": "Achird",
+    "hr": 219.0,
+    "ra": 0.81826,
+    "dec": 57.815187,
+    "mag": 3.46
+  },
+  "kaffaljidhma": {
+    "name": "Kaffaljidhma",
+    "hr": 804.0,
+    "ra": 2.721678,
+    "dec": 3.235818,
+    "mag": 3.47
+  },
+  "nganurganity": {
+    "name": "Nganurganity",
+    "hr": 2646.0,
+    "ra": 7.028652,
+    "dec": -27.93483,
+    "mag": 3.49
+  },
+  "nekkar": {
+    "name": "Nekkar",
+    "hr": 5602.0,
+    "ra": 15.032436,
+    "dec": 40.390566,
+    "mag": 3.49
+  },
+  "alula borealis": {
+    "name": "Alula Borealis",
+    "hr": 4377.0,
+    "ra": 11.307983,
+    "dec": 33.094306,
+    "mag": 3.49
+  },
+  "wasat": {
+    "name": "Wasat",
+    "hr": 2777.0,
+    "ra": 7.335383,
+    "dec": 21.98232,
+    "mag": 3.5
+  },
+  "sadalbari": {
+    "name": "Sadalbari",
+    "hr": 8684.0,
+    "ra": 22.833385,
+    "dec": 24.601579,
+    "mag": 3.51
+  },
+  "sheliak": {
+    "name": "Sheliak",
+    "hr": 7106.0,
+    "ra": 18.834665,
+    "dec": 33.362667,
+    "mag": 3.52
+  },
+  "biham": {
+    "name": "Biham",
+    "hr": 8450.0,
+    "ra": 22.169996,
+    "dec": 6.197865,
+    "mag": 3.52
+  },
+  "rana": {
+    "name": "Rana",
+    "hr": 1136.0,
+    "ra": 3.720806,
+    "dec": -9.763395,
+    "mag": 3.52
+  },
+  "subra": {
+    "name": "Subra",
+    "hr": 3852.0,
+    "ra": 9.685843,
+    "dec": 9.892308,
+    "mag": 3.52
+  },
+  "ain": {
+    "name": "Ain",
+    "hr": 1409.0,
+    "ra": 4.476943,
+    "dec": 19.180431,
+    "mag": 3.53
+  },
+  "tarf": {
+    "name": "Tarf",
+    "hr": 3249.0,
+    "ra": 8.275256,
+    "dec": 9.185545,
+    "mag": 3.53
+  },
+  "pipirima": {
+    "name": "Pipirima",
+    "hr": 6252.0,
+    "ra": 16.872263,
+    "dec": -38.017536,
+    "mag": 3.56
+  },
+  "alkaphrah": {
+    "name": "Alkaphrah",
+    "hr": 3594.0,
+    "ra": 9.060427,
+    "dec": 47.156525,
+    "mag": 3.57
+  },
+  "algedi": {
+    "name": "Algedi",
+    "hr": 7754.0,
+    "ra": 20.300904,
+    "dec": -12.544852,
+    "mag": 3.58
+  },
+  "ginan": {
+    "name": "Ginan",
+    "hr": 4700.0,
+    "ra": 12.356031,
+    "dec": -60.401147,
+    "mag": 3.59
+  },
+  "zavijava": {
+    "name": "Zavijava",
+    "hr": 4540.0,
+    "ra": 11.844922,
+    "dec": 1.764718,
+    "mag": 3.59
+  },
+  "nembus": {
+    "name": "Nembus",
+    "hr": 464.0,
+    "ra": 1.633205,
+    "dec": 48.628213,
+    "mag": 3.59
+  },
+  "bharani": {
+    "name": "Bharani",
+    "hr": 838.0,
+    "ra": 2.833063,
+    "dec": 27.260507,
+    "mag": 3.61
+  },
+  "atlas": {
+    "name": "Atlas",
+    "hr": 1178.0,
+    "ra": 3.819373,
+    "dec": 24.053415,
+    "mag": 3.62
+  },
+  "alfarasalkamil": {
+    "name": "Alfarasalkamil",
+    "hr": 8762.0,
+    "ra": 23.032017,
+    "dec": 42.325979,
+    "mag": 3.62
+  },
+  "alpherg": {
+    "name": "Alpherg",
+    "hr": 437.0,
+    "ra": 1.524725,
+    "dec": 15.345823,
+    "mag": 3.62
+  },
+  "rotanev": {
+    "name": "Rotanev",
+    "hr": 7882.0,
+    "ra": 20.625816,
+    "dec": 14.595087,
+    "mag": 3.64
+  },
+  "zhou": {
+    "name": "Zhou",
+    "hr": 5867.0,
+    "ra": 15.769793,
+    "dec": 15.421826,
+    "mag": 3.65
+  },
+  "prima hyadum": {
+    "name": "Prima Hyadum",
+    "hr": 1346.0,
+    "ra": 4.329889,
+    "dec": 15.627642,
+    "mag": 3.65
+  },
+  "nusakan": {
+    "name": "Nusakan",
+    "hr": 5747.0,
+    "ra": 15.463818,
+    "dec": 29.105703,
+    "mag": 3.66
+  },
+  "thuban": {
+    "name": "Thuban",
+    "hr": 5291.0,
+    "ra": 14.073165,
+    "dec": 64.37585,
+    "mag": 3.67
+  },
+  "safina": {
+    "name": "Safina",
+    "hr": 8812.0,
+    "ra": 23.157443,
+    "dec": -21.17241,
+    "mag": 3.68
+  },
+  "fulu": {
+    "name": "Fulu",
+    "hr": 153.0,
+    "ra": 0.616188,
+    "dec": 53.896909,
+    "mag": 3.69
+  },
+  "taiyangshou": {
+    "name": "Taiyangshou",
+    "hr": 4518.0,
+    "ra": 11.767515,
+    "dec": 47.779406,
+    "mag": 3.69
+  },
+  "saclateni": {
+    "name": "Saclateni",
+    "hr": 1612.0,
+    "ra": 5.041301,
+    "dec": 41.075837,
+    "mag": 3.69
+  },
+  "nashira": {
+    "name": "Nashira",
+    "hr": 8278.0,
+    "ra": 21.668181,
+    "dec": -16.662308,
+    "mag": 3.69
+  },
+  "alshain": {
+    "name": "Alshain",
+    "hr": 7602.0,
+    "ra": 19.921887,
+    "dec": 6.406763,
+    "mag": 3.71
+  },
+  "ran": {
+    "name": "Ran",
+    "hr": 1084.0,
+    "ra": 3.548848,
+    "dec": -9.458262,
+    "mag": 3.72
+  },
+  "electra": {
+    "name": "Electra",
+    "hr": 1142.0,
+    "ra": 3.747927,
+    "dec": 24.113339,
+    "mag": 3.72
+  },
+  "grumium": {
+    "name": "Grumium",
+    "hr": 6688.0,
+    "ra": 17.892134,
+    "dec": 56.872643,
+    "mag": 3.73
+  },
+  "baten kaitos": {
+    "name": "Baten Kaitos",
+    "hr": 539.0,
+    "ra": 1.857676,
+    "dec": -10.335038,
+    "mag": 3.74
+  },
+  "bake-eo": {
+    "name": "Bake-eo",
+    "hr": 6629.0,
+    "ra": 17.798211,
+    "dec": 2.707276,
+    "mag": 3.75
+  },
+  "stellio": {
+    "name": "Stellio",
+    "hr": 8585.0,
+    "ra": 22.521515,
+    "dec": 50.282491,
+    "mag": 3.76
+  },
+  "secunda hyadum": {
+    "name": "Secunda Hyadum",
+    "hr": 1373.0,
+    "ra": 4.382247,
+    "dec": 17.542514,
+    "mag": 3.77
+  },
+  "miram": {
+    "name": "Miram",
+    "hr": 834.0,
+    "ra": 2.844945,
+    "dec": 55.895496,
+    "mag": 3.77
+  },
+  "sualocin": {
+    "name": "Sualocin",
+    "hr": 7906.0,
+    "ra": 20.660635,
+    "dec": 15.912072,
+    "mag": 3.77
+  },
+  "albali": {
+    "name": "Albali",
+    "hr": 7950.0,
+    "ra": 20.794598,
+    "dec": -9.495776,
+    "mag": 3.78
+  },
+  "praecipua": {
+    "name": "Praecipua",
+    "hr": 4247.0,
+    "ra": 10.888526,
+    "dec": 34.214871,
+    "mag": 3.79
+  },
+  "misam": {
+    "name": "Misam",
+    "hr": 941.0,
+    "ra": 3.158258,
+    "dec": 44.857544,
+    "mag": 3.79
+  },
+  "dalim": {
+    "name": "Dalim",
+    "hr": 963.0,
+    "ra": 3.201249,
+    "dec": -28.987618,
+    "mag": 3.8
+  },
+  "theemin": {
+    "name": "Theemin",
+    "hr": 1464.0,
+    "ra": 4.592512,
+    "dec": -30.562341,
+    "mag": 3.81
+  },
+  "udkadua": {
+    "name": "Udkadua",
+    "hr": 8961.0,
+    "ra": 23.626056,
+    "dec": 46.458152,
+    "mag": 3.81
+  },
+  "giausar": {
+    "name": "Giausar",
+    "hr": 4434.0,
+    "ra": 11.523407,
+    "dec": 69.331076,
+    "mag": 3.82
+  },
+  "alrescha": {
+    "name": "Alrescha",
+    "hr": 595.0,
+    "ra": 2.034117,
+    "dec": 2.763759,
+    "mag": 3.82
+  },
+  "marfik": {
+    "name": "Marfik",
+    "hr": 6149.0,
+    "ra": 16.515229,
+    "dec": 1.983923,
+    "mag": 3.82
+  },
+  "paradys": {
+    "name": "Paradys",
+    "hr": 5470.0,
+    "ra": 14.797701,
+    "dec": -79.044751,
+    "mag": 3.83
+  },
+  "polis": {
+    "name": "Polis",
+    "hr": 6812.0,
+    "ra": 18.229392,
+    "dec": -21.058834,
+    "mag": 3.84
+  },
+  "atik": {
+    "name": "Atik",
+    "hr": 1131.0,
+    "ra": 3.738648,
+    "dec": 32.288248,
+    "mag": 3.84
+  },
+  "shaomin": {
+    "name": "Shaomin",
+    "hr": 4133.0,
+    "ra": 10.546853,
+    "dec": 9.306586,
+    "mag": 3.84
+  },
+  "tusizuo": {
+    "name": "Tusizuo",
+    "hr": 6895.0,
+    "ra": 18.394967,
+    "dec": 21.769752,
+    "mag": 3.85
+  },
+  "sceptrum": {
+    "name": "Sceptrum",
+    "hr": 1481.0,
+    "ra": 4.63634,
+    "dec": -14.30402,
+    "mag": 3.86
+  },
+  "sadachbia": {
+    "name": "Sadachbia",
+    "hr": 8518.0,
+    "ra": 22.360938,
+    "dec": -1.387331,
+    "mag": 3.86
+  },
+  "maia": {
+    "name": "Maia",
+    "hr": 1149.0,
+    "ra": 3.763779,
+    "dec": 24.367748,
+    "mag": 3.87
+  },
+  "iklil": {
+    "name": "Iklil",
+    "hr": 5928.0,
+    "ra": 15.948077,
+    "dec": -29.214073,
+    "mag": 3.87
+  },
+  "mesarthim": {
+    "name": "Mesarthim",
+    "hr": 546.0,
+    "ra": 1.89217,
+    "dec": 19.293852,
+    "mag": 3.88
+  },
+  "rasalas": {
+    "name": "Rasalas",
+    "hr": 3905.0,
+    "ra": 9.879398,
+    "dec": 26.006951,
+    "mag": 3.88
+  },
+  "zaniah": {
+    "name": "Zaniah",
+    "hr": 4689.0,
+    "ra": 12.331766,
+    "dec": -0.666803,
+    "mag": 3.89
+  },
+  "azha": {
+    "name": "Azha",
+    "hr": 874.0,
+    "ra": 2.940458,
+    "dec": -8.898144,
+    "mag": 3.89
+  },
+  "ukdah": {
+    "name": "Ukdah",
+    "hr": 3845.0,
+    "ra": 9.664267,
+    "dec": -1.14281,
+    "mag": 3.9
+  },
+  "zubenelhakrabi": {
+    "name": "Zubenelhakrabi",
+    "hr": 5787.0,
+    "ra": 15.592105,
+    "dec": -14.789537,
+    "mag": 3.91
+  },
+  "kitalpha": {
+    "name": "Kitalpha",
+    "hr": 8131.0,
+    "ra": 21.263731,
+    "dec": 5.247845,
+    "mag": 3.92
+  },
+  "asellus australis": {
+    "name": "Asellus Australis",
+    "hr": 3461.0,
+    "ra": 8.74475,
+    "dec": 18.154309,
+    "mag": 3.94
+  },
+  "wurren": {
+    "name": "Wurren",
+    "hr": 338.0,
+    "ra": 1.139742,
+    "dec": -55.24576,
+    "mag": 3.94
+  },
+  "arkab prior": {
+    "name": "Arkab Prior",
+    "hr": 7337.0,
+    "ra": 19.377303,
+    "dec": -44.458965,
+    "mag": 3.96
+  },
+  "rukbat": {
+    "name": "Rukbat",
+    "hr": 7348.0,
+    "ra": 19.398103,
+    "dec": -40.61594,
+    "mag": 3.96
+  },
+  "beemim": {
+    "name": "Beemim",
+    "hr": 1393.0,
+    "ra": 4.400613,
+    "dec": -34.016846,
+    "mag": 3.97
+  },
+  "menkib": {
+    "name": "Menkib",
+    "hr": 1228.0,
+    "ra": 3.98275,
+    "dec": 35.791033,
+    "mag": 3.98
+  },
+  "alcor": {
+    "name": "Alcor",
+    "hr": 5062.0,
+    "ra": 13.420413,
+    "dec": 54.987958,
+    "mag": 3.99
+  },
+  "jabbah": {
+    "name": "Jabbah",
+    "hr": 6027.0,
+    "ra": 16.199926,
+    "dec": -19.460708,
+    "mag": 4.0
+  },
+  "mekbuda": {
+    "name": "Mekbuda",
+    "hr": 2650.0,
+    "ra": 7.068481,
+    "dec": 20.570297,
+    "mag": 4.01
+  },
+  "alchiba": {
+    "name": "Alchiba",
+    "hr": 4623.0,
+    "ra": 12.140225,
+    "dec": -24.728875,
+    "mag": 4.02
+  },
+  "aldulfin": {
+    "name": "Aldulfin",
+    "hr": 7852.0,
+    "ra": 20.553547,
+    "dec": 11.303263,
+    "mag": 4.03
+  },
+  "beid": {
+    "name": "Beid",
+    "hr": 1298.0,
+    "ra": 4.197761,
+    "dec": -6.837581,
+    "mag": 4.04
+  },
+  "syrma": {
+    "name": "Syrma",
+    "hr": 5338.0,
+    "ra": 14.266908,
+    "dec": -6.000547,
+    "mag": 4.07
+  },
+  "alkes": {
+    "name": "Alkes",
+    "hr": 4287.0,
+    "ra": 10.996244,
+    "dec": -18.298783,
+    "mag": 4.08
+  },
+  "shimu": {
+    "name": "Shimu",
+    "hr": 215.0,
+    "ra": 0.788981,
+    "dec": 24.267178,
+    "mag": 4.08
+  },
+  "gudja": {
+    "name": "Gudja",
+    "hr": 5879.0,
+    "ra": 15.812327,
+    "dec": 18.141564,
+    "mag": 4.09
+  },
+  "titawin": {
+    "name": "Titawin",
+    "hr": 458.0,
+    "ra": 1.613299,
+    "dec": 41.405459,
+    "mag": 4.1
+  },
+  "zhang": {
+    "name": "Zhang",
+    "hr": 3903.0,
+    "ra": 9.85797,
+    "dec": -14.846603,
+    "mag": 4.11
+  },
+  "meridiana": {
+    "name": "Meridiana",
+    "hr": 7254.0,
+    "ra": 19.157869,
+    "dec": -37.904474,
+    "mag": 4.11
+  },
+  "muliphein": {
+    "name": "Muliphein",
+    "hr": 2657.0,
+    "ra": 7.062637,
+    "dec": -15.633286,
+    "mag": 4.11
+  },
+  "merope": {
+    "name": "Merope",
+    "hr": 1156.0,
+    "ra": 3.772104,
+    "dec": 23.948358,
+    "mag": 4.14
+  },
+  "kaffalmusalsala": {
+    "name": "Kaffalmusalsala",
+    "hr": 8976.0,
+    "ra": 23.673469,
+    "dec": 44.333932,
+    "mag": 4.15
+  },
+  "ancha": {
+    "name": "Ancha",
+    "hr": 8499.0,
+    "ra": 22.280565,
+    "dec": -7.78329,
+    "mag": 4.17
+  },
+  "xuange": {
+    "name": "Xuange",
+    "hr": 5351.0,
+    "ra": 14.273074,
+    "dec": 46.088305,
+    "mag": 4.18
+  },
+  "kang": {
+    "name": "Kang",
+    "hr": 5315.0,
+    "ra": 14.214929,
+    "dec": -10.273702,
+    "mag": 4.18
+  },
+  "garnet star": {
+    "name": "Garnet Star",
+    "hr": 8316.0,
+    "ra": 21.725127,
+    "dec": 58.780046,
+    "mag": 4.23
+  },
+  "chara": {
+    "name": "Chara",
+    "hr": 4785.0,
+    "ra": 12.562411,
+    "dec": 41.35748,
+    "mag": 4.24
+  },
+  "alsciaukat": {
+    "name": "Alsciaukat",
+    "hr": 3275.0,
+    "ra": 8.380588,
+    "dec": 43.188131,
+    "mag": 4.25
+  },
+  "torcular": {
+    "name": "Torcular",
+    "hr": 510.0,
+    "ra": 1.756564,
+    "dec": 9.157736,
+    "mag": 4.26
+  },
+  "acubens": {
+    "name": "Acubens",
+    "hr": 3572.0,
+    "ra": 8.974784,
+    "dec": 11.857701,
+    "mag": 4.26
+  },
+  "kurhah": {
+    "name": "Kurhah",
+    "hr": 8417.0,
+    "ra": 22.063135,
+    "dec": 64.627971,
+    "mag": 4.26
+  },
+  "82 g. eri": {
+    "name": "82 G. Eri",
+    "hr": 1008.0,
+    "ra": 3.331944,
+    "dec": -43.069784,
+    "mag": 4.26
+  },
+  "bodu": {
+    "name": "Bodu",
+    "hr": 6729.0,
+    "ra": 18.025113,
+    "dec": 21.595782,
+    "mag": 4.26
+  },
+  "arkab posterior": {
+    "name": "Arkab Posterior",
+    "hr": 7343.0,
+    "ra": 19.386976,
+    "dec": -44.799778,
+    "mag": 4.27
+  },
+  "rasalnaqa": {
+    "name": "Rasalnaqa",
+    "hr": 8965.0,
+    "ra": 23.63561,
+    "dec": 43.268073,
+    "mag": 4.29
+  },
+  "taygeta": {
+    "name": "Taygeta",
+    "hr": 1145.0,
+    "ra": 3.75347,
+    "dec": 24.467278,
+    "mag": 4.3
+  },
+  "alkalurops": {
+    "name": "Alkalurops",
+    "hr": 5733.0,
+    "ra": 15.408181,
+    "dec": 37.377167,
+    "mag": 4.31
+  },
+  "diadem": {
+    "name": "Diadem",
+    "hr": 4968.0,
+    "ra": 13.166469,
+    "dec": 17.529431,
+    "mag": 4.32
+  },
+  "alterf": {
+    "name": "Alterf",
+    "hr": 3773.0,
+    "ra": 9.528675,
+    "dec": 22.967971,
+    "mag": 4.32
+  },
+  "alula australis": {
+    "name": "Alula Australis",
+    "hr": 4375.0,
+    "ra": 11.303118,
+    "dec": 31.528783,
+    "mag": 4.33
+  },
+  "guniibuu": {
+    "name": "Guniibuu",
+    "hr": 6401.0,
+    "ra": 17.255836,
+    "dec": -26.602829,
+    "mag": 4.33
+  },
+  "botein": {
+    "name": "Botein",
+    "hr": 951.0,
+    "ra": 3.193822,
+    "dec": 19.726677,
+    "mag": 4.35
+  },
+  "yildun": {
+    "name": "Yildun",
+    "hr": 6789.0,
+    "ra": 17.536918,
+    "dec": 86.58646,
+    "mag": 4.35
+  },
+  "ramus": {
+    "name": "Ramus",
+    "hr": 6787.0,
+    "ra": 18.14597,
+    "dec": 20.814557,
+    "mag": 4.37
+  },
+  "yun\u00fc": {
+    "name": "Yun\u00fc",
+    "hr": 3980.0,
+    "ra": 10.131742,
+    "dec": 9.997508,
+    "mag": 4.39
+  },
+  "sham": {
+    "name": "Sham",
+    "hr": 7479.0,
+    "ra": 19.668275,
+    "dec": 18.01389,
+    "mag": 4.39
+  },
+  "kui": {
+    "name": "Kui",
+    "hr": 271.0,
+    "ra": 0.953445,
+    "dec": 23.417648,
+    "mag": 4.4
+  },
+  "maasym": {
+    "name": "Maasym",
+    "hr": 6526.0,
+    "ra": 17.512308,
+    "dec": 26.110645,
+    "mag": 4.41
+  },
+  "alkarab": {
+    "name": "Alkarab",
+    "hr": 8905.0,
+    "ra": 23.422993,
+    "dec": 23.404101,
+    "mag": 4.42
+  },
+  "solitaire": {
+    "name": "Solitaire",
+    "hr": 5526.0,
+    "ra": 14.838147,
+    "dec": -27.960371,
+    "mag": 4.42
+  },
+  "aladfar": {
+    "name": "Aladfar",
+    "hr": 7298.0,
+    "ra": 19.229302,
+    "dec": 39.145968,
+    "mag": 4.43
+  },
+  "keid": {
+    "name": "Keid",
+    "hr": 1325.0,
+    "ra": 4.254537,
+    "dec": -7.652871,
+    "mag": 4.43
+  },
+  "anser": {
+    "name": "Anser",
+    "hr": 7405.0,
+    "ra": 19.478427,
+    "dec": 24.664905,
+    "mag": 4.44
+  },
+  "minchir": {
+    "name": "Minchir",
+    "hr": 3418.0,
+    "ra": 8.645955,
+    "dec": 3.341435,
+    "mag": 4.45
+  },
+  "fumalsamakah": {
+    "name": "Fumalsamakah",
+    "hr": 8773.0,
+    "ra": 23.064615,
+    "dec": 3.820045,
+    "mag": 4.48
+  },
+  "khambalia": {
+    "name": "Khambalia",
+    "hr": 5359.0,
+    "ra": 14.318498,
+    "dec": -13.371095,
+    "mag": 4.52
+  },
+  "lilii borea": {
+    "name": "Lilii Borea",
+    "hr": 824.0,
+    "ra": 2.79848,
+    "dec": 29.247118,
+    "mag": 4.52
+  },
+  "honores": {
+    "name": "Honores",
+    "hr": 8830.0,
+    "ra": 23.20916,
+    "dec": 49.406207,
+    "mag": 4.53
+  },
+  "dziban": {
+    "name": "Dziban",
+    "hr": 6636.0,
+    "ra": 17.698978,
+    "dec": 72.148843,
+    "mag": 4.57
+  },
+  "cujam": {
+    "name": "Cujam",
+    "hr": 6117.0,
+    "ra": 16.423598,
+    "dec": 14.03327,
+    "mag": 4.57
+  }
+}

@@ -1,4 +1,10 @@
 // three-scene.js
+//This is the scene bootstrap. 
+//It creates the scene, camera, renderers, and controls.
+//If we didn't have this we wouldn't have a 3D space!
+ 
+
+
 import * as THREE from "three";
 import { OrbitControls, CSS2DRenderer } from "three-stdlib";
 
@@ -12,21 +18,14 @@ import { OrbitControls, CSS2DRenderer } from "three-stdlib";
 export function initThreeScene(container, opts = {}) {
   if (!container) throw new Error("initThreeScene: container is required");
 
-  const frustumSize = opts.frustumSize ?? 60;
+  const frustumSize = opts.frustumSize ?? 300; //determines where camera stars, zooms in and out. 
   const aspect = container.clientWidth / container.clientHeight;
 
   // --- Scene & camera -------------------------------------------------------
   const scene = new THREE.Scene();
-  const camera = new THREE.OrthographicCamera(
-    (-frustumSize * aspect) / 2,
-    (frustumSize * aspect) / 2,
-    frustumSize / 2,
-    -frustumSize / 2,
-    0.1,
-    1000
-  );
-  camera.position.set(-3, 1, 0); //(x, y, z)
-  camera.lookAt(1, 1, 1);
+  const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+  camera.position.set(0, 0, 100); // Start outside like test-sphere.html
+  camera.lookAt(0, 0, 0); // Look at center
 
   // --- WebGL renderer -------------------------------------------------------
   const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -43,19 +42,25 @@ export function initThreeScene(container, opts = {}) {
 
   // --- Orbit controls -------------------------------------------------------
   const controls = new OrbitControls(camera, renderer.domElement);
-  controls.enablePan = false;
   controls.enableDamping = true;
-  controls.rotateSpeed = 0.4;
-  controls.target.set(0, 0, -1);
+  controls.dampingFactor = 0.05;
+  controls.rotateSpeed = 0.5;
+  controls.zoomSpeed = 1.0;
+  controls.panSpeed = 0.8;
+  controls.target.set(0, 0, 0); // Center the target at origin
+  controls.minDistance = 50;
+  controls.maxDistance = 280;
+  controls.enableZoom = true;
+  controls.enablePan = false;
+  // Auto-rotation settings
+  controls.autoRotate = false;
+  controls.autoRotateSpeed = 0.3; // Slow, smooth rotation
   controls.update();
 
   // --- Resize handler -------------------------------------------------------
   function handleResize() {
     const aspect = container.clientWidth / container.clientHeight;
-    camera.left = (-frustumSize * aspect) / 2;
-    camera.right = (frustumSize * aspect) / 2;
-    camera.top = frustumSize / 2;
-    camera.bottom = -frustumSize / 2;
+    camera.aspect = aspect;
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
     labelRenderer.setSize(container.clientWidth, container.clientHeight);

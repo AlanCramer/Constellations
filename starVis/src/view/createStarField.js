@@ -1,8 +1,10 @@
+//This creates the star field characteristics, labels, inside and outside view. 
+
+
 // createStarField.js
 import * as THREE from "three";
 import { CSS2DObject } from "three-stdlib";
 import { raDecToVec3 } from "../utils/utils.js";
-import { useHRNames, useStarNames } from "../dom/uiControls.js";
 
 /**
  * Build a THREE.Points mesh *plus* optional name-labels.
@@ -28,29 +30,31 @@ export function createStarField(starMap, opts = {}) {
   for (const star of starMap.values()) {
     if (isNaN(star.ra) || isNaN(star.dec) || isNaN(star.mag)) continue;
 
-    // Cache position for the star
+    // Cache position for the star (Chloe - why do we need to do this??)
     const pos = star.pos ?? (star.pos = raDecToVec3(star.ra, star.dec, radius).multiplyScalar(-1));
     positions.push(pos.x, pos.y, pos.z);
     colors.push(1, 1, 1); // Default color is white
 
     // Create HR name label if HR is available and the toggle is on
-    if (/*useHRNames &&*/ star.hr) {
+    if (star.hr) {
       const div = document.createElement("div");
       div.className = "hr-star-label";
       div.textContent = `HR ${star.hr}`;
       const label = new CSS2DObject(div);
       label.position.copy(pos.clone().normalize().multiplyScalar(radius + 4));
+      label.visible = false; // Start with labels hidden
       group.add(label);
       hrLabels.push(label);
-    }
+    } 
 
     // Create Star name label if the name is available and the toggle is on
-    if (/*useStarNames &&*/ star.name) {
+    if (star.name) {
       const div = document.createElement("div");
       div.className = "star-name";
       div.textContent = star.name;
       const label = new CSS2DObject(div);
       label.position.copy(pos.clone().normalize().multiplyScalar(radius + 6));
+      label.visible = false; // Start with labels hidden
       group.add(label);
       nameLabels.push(label);
     }
@@ -70,6 +74,23 @@ export function createStarField(starMap, opts = {}) {
   const points = new THREE.Points(geometry, material);
   group.add(points);
 
+  // Function to switch between inside and outside view
+  function switchStarView(isInsideView) {
+    const positions = geometry.attributes.position.array;
+    let index = 0;
+    
+    for (const star of starMap.values()) {
+      if (isNaN(star.ra) || isNaN(star.dec) || isNaN(star.mag)) continue;
+      
+      const pos = isInsideView ? star.posInside : star.posOutside;
+      positions[index++] = pos.x;
+      positions[index++] = pos.y;
+      positions[index++] = pos.z;
+    }
+    
+    geometry.attributes.position.needsUpdate = true;
+  }
+
   // Function to dispose of geometry and material
   function dispose() {
     geometry.dispose();
@@ -77,5 +98,5 @@ export function createStarField(starMap, opts = {}) {
   }
 
   // Return the result with proper closure
-  return { group, hrLabels, nameLabels, dispose };
+  return { group, hrLabels, nameLabels, dispose, switchStarView };
 }
