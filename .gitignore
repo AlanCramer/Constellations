@@ -6,3 +6,4 @@ dist/
 .prettierignore
 venv/
 chloe_start_notes.txt
+.vite/
