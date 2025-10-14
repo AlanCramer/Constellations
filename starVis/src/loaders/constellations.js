@@ -43,12 +43,25 @@ export function createConstellationMap(csvText) {
     // Store constellation data in MAP!
     constellationMap.set(abr, ids);
   }
+  //Console log: 
+  console.log("constellationMap in createConstellationMap:")
+  let count = 0
+  for (const [abr, ids] of constellationMap) {
+    if (count >= 1) break; 
+    console.log(`${abr}: [${ids.join(',')}]`)
+    count++;
+  }
 
   return constellationMap; // <---- RETURNING A MAP! --this parsing logic is used in loadConstellationData. 
+  //Example: Leo: [3937,3969,3975,3873,3905,3731,3773,3873,3905,4031,4057,4357]
 }
 
 
-export async function loadConstellationData(
+//Now... this uses the constellation map to create the constellation edges. 4
+//////Should we rename this to be loadConstellationEdges? -- it creates the constellation edges array...? 
+
+
+export async function loadConstellationEdges(
   url = "../../public/ConstellationLines.csv" //now we actually pass in the url, the data!
 ) {
   //fetches the csv file. 
@@ -72,11 +85,26 @@ export async function loadConstellationData(
   }
 
   if (edges.length === 0) {
-    console.warn("loadConstellationData: parsed zero edges — wrong CSV?");
+    console.warn("loadConstellationEdges: parsed zero edges — wrong CSV?");
+  }
+  
+
+  console.log("constellationMap in loadConstellationEdges")
+  let count = 0
+  for (const [abr, ids] of constellationMap) {
+    if (count >= 1) break; 
+    console.log(`${abr}: [${ids.join(',')}]`)
+    count++;
   }
 
-  console.log(
-    `Loaded ${constellationMap.size} constellations with ${edges.length} total edges`
-  );
-  return { edges, constellationMap };
+    //Debug: logging edges array (first 1 only)
+    console.log("Edges (first 1 only):")
+    console.log(edges.slice(0, 1))
+    
+    console.log(
+      `Loaded ${constellationMap.size} constellations with ${edges.length} total edges`
+    );
+  
+
+  return { edges };
 }

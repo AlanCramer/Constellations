@@ -9,7 +9,7 @@ import { loadStarMap } from "./loaders/stars.js";
 import { createStarField } from "./view/createStarField.js";
 
 //function that reads constellation line (edges) data from csv and creates a map of edges. 
-import { loadConstellationData } from "./loaders/constellations.js";
+import { loadConstellationEdges } from "./loaders/constellations.js";
 
 //function that makes the constellation lines.
 import { createConstellations } from "./view/createConstellations.js";
@@ -67,7 +67,7 @@ window.constellationSphere = sphere;
 
 //Load constellations from constellations.js 
 // Using the new loader that creates both edges array and constellation map
-const { edges, constellationMap } = await loadConstellationData();
+const { edges, constellationMap } = await loadConstellationEdges();
 
 // Make constellation map globally accessible for testing
 window.constellationMap = constellationMap;
